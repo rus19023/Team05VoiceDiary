@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    // Pasword authentication in firebase
+    // Password authentication in firebase
 
     private authenticateUser(){
         Toast.makeText(this, "working conection to authenticateUser  ", Toast.LENGTH_SHORT).show();

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "718594650979",
+    "firebase_url": "https://voicediary-df317.firebaseio.com",
+    "project_id": "voicediary-df317",
+    "storage_bucket": "voicediary-df317.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718594650979:android:10c1fc38f9d1aff1de5956",
+        "android_client_info": {
+          "package_name": "com.voicediary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718594650979-ire1ni3lkenobjgbnq8j9puou3l8lvtd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPgNPZQfEFbad5gwUCPHqii8-Sjo71pQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718594650979-ire1ni3lkenobjgbnq8j9puou3l8lvtd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
