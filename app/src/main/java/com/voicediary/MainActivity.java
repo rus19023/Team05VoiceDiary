@@ -2,7 +2,11 @@ package com.voicediary;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -10,14 +14,62 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Our Activity" ;
+    private static final String VOICE_DIARY_PREFS = "voiceDiarySessionInfo";
     String transcription;
+    private static final String IS_LOGIN = "isLoggedIn";
+    public static final String KEY_USERNAME = "username";
+    public static final String KEY_PASSWORD = "password";
+
+
 
         @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        /* ----------- basic of Shared preferences -----------*/
+        // create a share preference and a editor to work with that preferenc
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this.Context.MODE_PRIVATE);
+
+
         setContentView(R.layout.activity_main);
+        // retrieve the sharedPreferences values
+        String saved_username = sharedPrefs.getString("username", "");
+        String saved_password = sharedPrefs.getString("password", "");
+        String saved_isLogin = sharedPrefs.getString("password", "");
+
+        // Save the scripture variable contents to log
+        //Log.i(String.format("Retrieved settings %s, %s, %s", saved_isLogin, saved_username, saved_password));
+        Log.d(getClass().getName(), String.format("About to create intent with %s", saved_isLogin, saved_username, saved_password));
+
+        Toast.makeText(getApplicationContext(), String.format("Preferences %s %s:%s retrieved.",
+                saved_isLogin, saved_username, saved_password), Toast.LENGTH_SHORT).show();
     }
+
+    protected void onPause() {
+        super.onPause();
+
+        /* ----------- basic of Shared preferences -----------*/
+        // create a share preference and a editor to work with that preferenc
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this.Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+
+        // save the sharedPreferences values
+        editor.putString(MainActivity.IS_LOGIN, "isLoggedIn");
+        editor.putString(MainActivity.KEY_USERNAME, "user5974");
+        editor.putString(MainActivity.KEY_PASSWORD, "password51");
+        // Why apply() and not commit() ?
+        // See: http://stackoverflow.com/questions/5960678/whats-the-difference-between-commit-and-apply-in-shared-preference
+        editor.apply();
+
+        // See https://developer.android.com/guide/topics/ui/notifiers/toasts.html
+        Toast.makeText(this, "Preferences have been saved.", Toast.LENGTH_SHORT).show();
+
+
+
+    }
+
+
 
     private void authenticateUser(View view){
         Toast.makeText(this, "working connection to authenticateUser  ", Toast.LENGTH_SHORT).show();
