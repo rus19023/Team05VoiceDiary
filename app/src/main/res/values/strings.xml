@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">Voice Diary</string>
+    <string name="register_title">Register</string>
+    <string name="settings_title">Settings</string>
+    <string name="main_menu_title">Main Menu</string>
+    <string name="login_title">Login</string>
+    <string name="name_label">Name</string>
+    <string name="name_hint">Your Name</string>
+    <string name="dob_label">Date of Birth</string>
+    <string name="email_hint">emailname@domain.com</string>
+    <string name="email_label">Email</string>
+    <string name="password_hint">At least 8 characters, 1 must be a number</string>
+    <string name="password_label">Password</string>
+    <string name="save">Save</string>
+    <string name="revert">Revert</string>
+    <string name="authenticate">Login</string>
+    <string name="register">Register</string>
+    <string name="start_record">Start Recording</string>
+    <string name="stop_record">Stop Recording</string>
+    <string name="request_transcript">Request Transcript</string>
+    <string name="see_transcript">See Transcript</string>
+    <string name="save_entry">Save Entry</string>
+    <string name="delete_entry">Delete Entry</string>
+    <string name="retrieve_entry">Retrieve Entry</string>
+    <string name="receive_text">Receive Text</string>
+    <string name="text_entry">Text Entry</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 </resources>
