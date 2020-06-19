@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_request_transcription"
+            android:icon="@drawable/ic_request_transcript"
+            android:title="Request Transcription" />
+        <item
+            android:id="@+id/nav_view_transcription"
+            android:icon="@drawable/ic_view_transcription"
+            android:title="View Transcription" />
+        <item
+            android:id="@+id/nav_save_new_entry"
+            android:icon="@drawable/ic_save_entry"
+            android:title="Save New Entry " />
+        <item
+            android:id="@+id/nav_delete_"
+            android:icon="@drawable/ic_delete"
+            android:title="Delete New Entry" />
+        <item
+        android:id="@+id/nav_record"
+        android:icon="@drawable/ic_record"
+        android:title="Record Audio Journal Entry" />
+        <item
+            android:id="@+id/nav_stop_record"
+            android:icon="@drawable/ic_record_stop"
+            android:title="Stop Recording" />
+    </group>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_login"
+                android:icon="@drawable/ic_login"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>

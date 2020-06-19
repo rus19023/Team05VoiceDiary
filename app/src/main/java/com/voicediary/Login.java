@@ -1,18 +1,9 @@
 package com.voicediary;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActivityOptions;
-import android.content.Intent;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
 
@@ -20,6 +11,34 @@ public class Login extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_login);
+  }
+
+  public void userLogin(View view) {
+    // check internet connection
+   // CheckInternet checkInternet = new CheckInternet();
+   // if (!checkInternet.isConnected(Login.this));
+
+
+    // validate phone number and password
+    //if (!validateFields()) {
+      //progressbar.setVisibility(View.VISIBLE);
+
+      // get data from fields
+      //String _phone_number = phoneNumber.getEditText().getText().toString().trim();
+      //final String _password = password.getEditText().getText().toString().trim();
+      //if (_phone_number.charAt(0) == 0);
+      //final String _completePhoneNumber = "+" + countryCodePicker.getFullNumber() + _phone_number;
+
+      // get user data from Firebase
+
+
+      // create session
+      //SessionManager sessionManager = new SessionManager(this);
+      //sessionManager.createLoginSession(_username, _password);
+
+      //startActivity(new Intent(getApplicationContext()Dashboard.class));
+
+    //}
   }
 
 }
