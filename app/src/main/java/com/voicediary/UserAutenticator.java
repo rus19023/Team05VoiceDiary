@@ -8,6 +8,8 @@ public class UserAutenticator {
 
     private static final String TAG = "UserAutenticator class" ;
 
+
+    // Password authentication in firebase
     private boolean authenticateUser(MainActivity context) {
         Toast.makeText(context, "working conection to authenticateUser  ", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In authenticateUser  ");

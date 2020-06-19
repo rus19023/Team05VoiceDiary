@@ -118,7 +118,12 @@ public class MainActivity extends AppCompatActivity {
 
 
      */
-
+    // show transcription received
+    public String seeTranscription() {
+        Toast.makeText(this, "working conection to seeTranscription ", Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "In  seeTranscription ");
+        return transcription;
+    }
 
         // Password authentication in firebase
 
@@ -126,63 +131,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        // record sound from the device using media
-    public  void startRecording() {
-            Toast.makeText(this, "working conection to startRecording ", Toast.LENGTH_SHORT).show();
-            Log.d(TAG, "In startRecording  ");
-        }
 
 
-        // stop the recording from the device
-    public void stopRecording() {
-            Toast.makeText(this, "working conection to stopRecording", Toast.LENGTH_SHORT).show();
-            Log.d(TAG, "In   stopRecording");
-        }
 
 
-        // request transcription from the API
-    public  String requestTranscription() {
-            Toast.makeText(this, "working conection to requestTranscription", Toast.LENGTH_SHORT).show();
-            Log.d(TAG, "In  requestTranscription");
-        return "";
-        }
-
-        // show transcription received
-    public String seeTranscription() {
-            Toast.makeText(this, "working conection to seeTranscription ", Toast.LENGTH_SHORT).show();
-            Log.d(TAG, "In  seeTranscription ");
-        return "";
-        }
 
 
-        // store the new text entry received (shared preferences or firebase)
-    public boolean saveNewEntry() {
-            Toast.makeText(this, "working conection to  saveNewEntry", Toast.LENGTH_SHORT).show();
-            Log.d(TAG, "In   ");
-            return true;
-        }
-
-        // delete an entry from storage
-    public boolean deleteSavedEntry() {
-            Toast.makeText(this, "working conection to deleteSavedEntry", Toast.LENGTH_SHORT).show();
-            Log.d(TAG, "In  saveNewEntry ");
-            return true;
-        }
-
-
-        // search and retrieve an entry from storage
-    public String retrieveEntry() {
-            Toast.makeText(this, "working conection to retrieveEntry ", Toast.LENGTH_SHORT).show();
-            Log.d(TAG, "In  retrieveEntry ");
-        return "";
-        }
-
-        // receive text from the API as json and put it in a string
-    public String receiveText() {
-            Toast.makeText(this, "working conection to  receiveText", Toast.LENGTH_SHORT).show();
-            Log.d(TAG, "In receiveText  ");
-            return "";
-        }
 
 
     }

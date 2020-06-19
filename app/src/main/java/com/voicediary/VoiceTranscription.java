@@ -1,5 +1,7 @@
 package com.voicediary;
 
+import android.media.MediaPlayer;
+
 public interface VoiceTranscription {
-    void handleResult(RecordLoader transcription);
+    void handleResult(String transcription);
 }
