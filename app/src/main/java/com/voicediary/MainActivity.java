@@ -9,45 +9,30 @@ import android.widget.Toast;
 import java.util.List;
 
 
+
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "Our Activity" ;
+
+
+    private static final String TAG = "MainActivity";
+    private String password;
     String transcription;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+       String user = UserPreferences.loadSavedSharePreferencesPassword(this);
+
+
     }
 
-  /* ----------- basic of Shared preferences -----------
+    @Override
+    protected void onPause() {
+        super.onPause();
+        UserPreferences.saveSharedPreferencesPassword(this, "");
 
-   create a share preference and a editor to work with that preference
-        SharedPreferences sharedPrefs = getSharedPreferences(MainActivity.APP_PREFS, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPrefs.edit();
-
-
- create a new instance of intent to receive data from another activity
-        Intent intent = getIntent();
-
-  get the data send by the intent invoked
-         book = intent.getStringExtra(MainActivity.EXTRA_MESSAGE1);
-         chapter = intent.getStringExtra(MainActivity.EXTRA_MESSAGE2);
-         verse = intent.getStringExtra(MainActivity.EXTRA_MESSAGE3);
-save the sharedPreferences values
-        editor.putString(MainActivity.EXTRA_MESSAGE1 ,book);
-
-        editor.putString(MainActivity.EXTRA_MESSAGE2 , chapter);
-
-        editor.putString(MainActivity.EXTRA_MESSAGE3 , verse);
-
-        // Why apply() and not commit() ?
-        // See: http://stackoverflow.com/questions/5960678/whats-the-difference-between-commit-and-apply-in-shared-preference
-        editor.apply();
-
-retrieve the sharedPreferences values
-
-        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-        int defaultValue = getResources().getInteger(R.integer.saved_high_score_default_key);
-        int highScore = sharedPref.getInt(getString(R.string.saved_high_score_key), defaultValue);
+    }
 
 
 
@@ -55,7 +40,6 @@ retrieve the sharedPreferences values
 
 
 
-   */
 
 
     /*-------- this is the format of a basic intent-------
@@ -136,76 +120,69 @@ retrieve the sharedPreferences values
      */
 
 
+        // Password authentication in firebase
 
 
 
 
-    // Password authentication in firebase
 
-    private authenticateUser(){
-        Toast.makeText(this, "working conection to authenticateUser  ", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In authenticateUser  ");
+        // record sound from the device using media
+    public  void startRecording() {
+            Toast.makeText(this, "working conection to startRecording ", Toast.LENGTH_SHORT).show();
+            Log.d(TAG, "In startRecording  ");
+        }
+
+
+        // stop the recording from the device
+    public void stopRecording() {
+            Toast.makeText(this, "working conection to stopRecording", Toast.LENGTH_SHORT).show();
+            Log.d(TAG, "In   stopRecording");
+        }
+
+
+        // request transcription from the API
+    public  String requestTranscription() {
+            Toast.makeText(this, "working conection to requestTranscription", Toast.LENGTH_SHORT).show();
+            Log.d(TAG, "In  requestTranscription");
+        return "";
+        }
+
+        // show transcription received
+    public String seeTranscription() {
+            Toast.makeText(this, "working conection to seeTranscription ", Toast.LENGTH_SHORT).show();
+            Log.d(TAG, "In  seeTranscription ");
+        return "";
+        }
+
+
+        // store the new text entry received (shared preferences or firebase)
+    public boolean saveNewEntry() {
+            Toast.makeText(this, "working conection to  saveNewEntry", Toast.LENGTH_SHORT).show();
+            Log.d(TAG, "In   ");
+            return true;
+        }
+
+        // delete an entry from storage
+    public boolean deleteSavedEntry() {
+            Toast.makeText(this, "working conection to deleteSavedEntry", Toast.LENGTH_SHORT).show();
+            Log.d(TAG, "In  saveNewEntry ");
+            return true;
+        }
+
+
+        // search and retrieve an entry from storage
+    public String retrieveEntry() {
+            Toast.makeText(this, "working conection to retrieveEntry ", Toast.LENGTH_SHORT).show();
+            Log.d(TAG, "In  retrieveEntry ");
+        return "";
+        }
+
+        // receive text from the API as json and put it in a string
+    public String receiveText() {
+            Toast.makeText(this, "working conection to  receiveText", Toast.LENGTH_SHORT).show();
+            Log.d(TAG, "In receiveText  ");
+            return "";
+        }
+
+
     }
-
-    // create a new user in firebase
-    private createUser(){
-        Toast.makeText(this, "working conection to authenticateUser  ", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In authenticateUser  ");
-
-    }
-
-    // record sound from the device using media
-    public startRecording() {
-        Toast.makeText(this, "working conection to startRecording ", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In startRecording  ");
-    }
-
-
-    // stop the recording from the device
-    public stopRecording(){
-        Toast.makeText(this, "working conection to stopRecording", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In   stopRecording");
-    }
-
-
-
-    // request transcription from the API
-    public requestTranscription(){
-        Toast.makeText(this, "working conection to requestTranscription", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In  requestTranscription");
-    }
-
-    // show transcription received
-    public seeTranscription(){
-        Toast.makeText(this, "working conection to seeTranscription ", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In  seeTranscription ");
-    }
-
-
-    // store the new text entry received (shared preferences or firebase)
-    public saveNewEntry(){
-        Toast.makeText(this, "working conection to  saveNewEntry", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In   ");
-    }
-
-    // delete an entry from storage
-    public deleteSavedEntry(){
-        Toast.makeText(this, "working conection to deleteSavedEntry", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In  saveNewEntry ");
-    }
-
-
-    // search and retrieve an entry from storage
-    public retrieveEntry(){
-        Toast.makeText(this, "working conection to retrieveEntry ", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In  retrieveEntry ");
-    }
-
-    // receive text from the API as json and put it in a string
-    public receiveText(){
-        Toast.makeText(this, "working conection to  receiveText", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In receiveText  ");
-    }
-
-
-}
