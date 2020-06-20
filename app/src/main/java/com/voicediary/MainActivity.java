@@ -18,7 +18,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private static final String TAG = "Our Activity" ;
     private static final String VOICE_DIARY_PREFS = "voiceDiarySessionInfo";
     String transcription;
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         String saved_isLogin = sharedPrefs.getString("password", "");
 
         // Save the  variable contents to log
-        Log.i(getClass().getName(), (String.format("Retrieved settings %s, %s, %s", saved_isLogin, saved_username, saved_password));
+        Log.i(getClass().getName(), (String.format("Retrieved settings %s, %s, %s", saved_isLogin, saved_username, saved_password)));
         Log.d(getClass().getName(), String.format("About to create intent with %s", saved_isLogin, saved_username, saved_password));
 
         Toast.makeText(getApplicationContext(), String.format("Preferences %s %s:%s retrieved.",
@@ -52,39 +52,41 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
+        navigationView.setNavigationItemSelectedListener(this);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        // *** need to figure out user registered/logged in logic and implement here ***
+          //  separate fragments for register and login
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.main_view,
-                    new RequestTranscriptFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_request_transcription);
+                    new RegisterLoginFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_record);
         }
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.nav_message:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new MessageFragment()).commit();
+            case R.id.nav_record:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_view,
+                        new RegisterLoginFragment()).commit();
                 break;
-            case R.id.nav_chat:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ChatFragment()).commit();
+            case R.id.nav_print_menu:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_view,
+                        new PrintMenuFragment()).commit();
                 break;
-            case R.id.nav_profile:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new ProfileFragment()).commit();
+            case R.id.nav_entries:
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_view,
+                        new EntriesFragment()).commit();
                 break;
-            case R.id.nav_share:
-                Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
+            case R.id.nav_login:
+                Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.nav_send:
-                Toast.makeText(this, "Send", Toast.LENGTH_SHORT).show();
+            case R.id.nav_logout:
+                Toast.makeText(this, "This menu item will connect to Logout", Toast.LENGTH_SHORT).show();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);
@@ -104,6 +106,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void authenticateUser(View view){
+        Toast.makeText(this, "working connection to authenticateUser  ", Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "In authenticateUser");
+    }
+
+    private void pauseRecording(View view){
         Toast.makeText(this, "working connection to authenticateUser  ", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In authenticateUser");
     }

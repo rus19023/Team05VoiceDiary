@@ -1,44 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+    xmlns:tools="http://schemas.android.com/tools">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_request_transcription"
-            android:icon="@drawable/ic_request_transcript"
-            android:title="Request Transcription" />
+            android:id="@+id/nav_record"
+            android:icon="@drawable/ic_record"
+            android:title="@string/record_audio_journal_entry" />
+        <item
+            android:id="@+id/nav_entries"
+            android:icon="@drawable/ic_folder"
+            android:title="@string/manage_diary_entries" />
+        <item
+            android:id="@+id/nav_print_menu"
+            android:icon="@drawable/ic_print"
+            android:title="@string/print_menu" />
         <item
             android:id="@+id/nav_view_transcription"
             android:icon="@drawable/ic_view_transcription"
-            android:title="View Transcription" />
+            android:title="" />
         <item
             android:id="@+id/nav_save_new_entry"
             android:icon="@drawable/ic_save_entry"
-            android:title="Save New Entry " />
-        <item
-            android:id="@+id/nav_delete_"
-            android:icon="@drawable/ic_delete"
-            android:title="Delete New Entry" />
-        <item
-        android:id="@+id/nav_record"
-        android:icon="@drawable/ic_record"
-        android:title="Record Audio Journal Entry" />
-        <item
-            android:id="@+id/nav_stop_record"
-            android:icon="@drawable/ic_record_stop"
-            android:title="Stop Recording" />
+            android:title="" />
     </group>
-    <item android:title="Communicate">
-        <menu>
+
+
             <item
                 android:id="@+id/nav_login"
                 android:icon="@drawable/ic_login"
-                android:title="Share" />
+                android:title="@string/login" />
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_logout"
-                android:title="Send" />
-        </menu>
-    </item>
+                android:title="@string/logout" />
+
+
 
 </menu>

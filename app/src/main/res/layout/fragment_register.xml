@@ -41,23 +41,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:text="@string/dob_label"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <DatePicker
-            android:id="@+id/dateOfBirthInput"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:calendarViewShown="false"
-            android:datePickerMode="spinner"
-            android:inputType="text|date" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
             android:layout_marginTop="@dimen/activity_vertical_margin_small"
             android:text="@string/email_label"
             android:textAppearance="?android:attr/textAppearanceMedium" />

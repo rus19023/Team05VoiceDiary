@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvRecording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/record_audio_journal_entry"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageBtnRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_background"
+            android:elevation="6dp"
+            android:onClick="requestTranscription"
+            app:srcCompat="@drawable/ic_request_lg"
+            tools:layout_editor_absoluteX="473dp"
+            tools:layout_editor_absoluteY="83dp" />
+
+        <ImageButton
+            android:id="@+id/imageBtnPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="38dp"
+            android:background="@color/design_default_color_background"
+            android:elevation="6dp"
+            app:layout_constraintStart_toEndOf="@+id/imageBtnRecord"
+            app:layout_constraintTop_toTopOf="@+id/imageBtnRecord"
+            app:srcCompat="@drawable/ic_pause_lg" />
+
+        <ImageButton
+            android:id="@+id/imageBtnRecordStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="35dp"
+            android:background="@color/design_default_color_background"
+            android:elevation="6dp"
+            android:onClick="stopRecording"
+            app:layout_constraintStart_toEndOf="@+id/imageBtnPause"
+            app:layout_constraintTop_toTopOf="@+id/imageBtnPause"
+            app:srcCompat="@drawable/ic_mic_off_lg" />
+
+        <ImageButton
+            android:id="@+id/imageBtnRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:background="@color/design_default_color_background"
+            android:elevation="6dp"
+            android:onClick="startRecording"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/imageBtnRequest"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageBtnRequest"
+            app:srcCompat="@drawable/ic_mic_lg" />
+
+        <ImageButton
+            android:id="@+id/imageBtnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="63dp"
+            android:background="@color/design_default_color_background"
+            android:elevation="6dp"
+            android:onClick="saveNewEntry"
+            app:layout_constraintBottom_toBottomOf="@+id/imageBtnRequest"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageBtnRequest"
+            app:srcCompat="@drawable/ic_save_lg" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_recording"
+            tools:layout_editor_absoluteX="455dp"
+            tools:layout_editor_absoluteY="175dp" />
+
+        <TextView
+            android:id="@+id/tvRequest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/request_transcript"
+            tools:layout_editor_absoluteX="579dp"
+            tools:layout_editor_absoluteY="175dp" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+/>
