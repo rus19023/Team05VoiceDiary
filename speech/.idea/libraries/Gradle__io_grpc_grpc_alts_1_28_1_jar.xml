@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: io.grpc:grpc-alts:1.28.1@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-alts/1.28.1/5130a706edcd6f6b54b0e607dcc5af8affc66fc2/grpc-alts-1.28.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-alts/1.28.1/b9d8d865665f9cba0fe964d3b60f6c2ee5602f5/grpc-alts-1.28.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-alts/1.28.1/21c3db9af6ab0d6679797e7638f2aac6ea3d3e70/grpc-alts-1.28.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
