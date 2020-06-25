@@ -36,10 +36,10 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_line_two">Just say "Hello Diary"</string>
-    <string name="header_img_desc">Androd icon</string>
+    <string name="header_img_desc">Android icon</string>
     <string name="print_menu">Print Menu</string>
     <string name="manage_diary_entries">Manage Diary Entries</string>
-    <string name="record_audio_journal_entry">Record Audio Journal Entry</string>
+    <string name="new_journal_entry">New Journal Entry</string>
     <string name="save_new_entry">Save New Entry</string>
     <string name="view_transcription">View Transcription</string>
     <string name="connection">Connection</string>
@@ -47,4 +47,5 @@
     <string name="logout">Logout</string>
     <string name="login_fragment">Login Fragment</string>
     <string name="save_recording">Save Recording</string>
+    <string name="entry_management">Entry Management</string>
 </resources>

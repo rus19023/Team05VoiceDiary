@@ -5,7 +5,7 @@
         <item
             android:id="@+id/nav_record"
             android:icon="@drawable/ic_record"
-            android:title="@string/record_audio_journal_entry" />
+            android:title="@string/new_journal_entry" />
         <item
             android:id="@+id/nav_entries"
             android:icon="@drawable/ic_folder"

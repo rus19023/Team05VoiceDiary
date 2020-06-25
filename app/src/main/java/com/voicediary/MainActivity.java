@@ -21,7 +21,7 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private static final String TAG = "Our Activity" ;
     String transcription;
-    private static final Boolean IS_LOGIN = false;
+    private static final String IS_LOGIN = "false";
     public static final String KEY_USERNAME = "username";
     public static final String KEY_PASSWORD = "password";
     private DrawerLayout drawer;
@@ -40,10 +40,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         String saved_password = sharedPrefs.getString("password", "");
 
         // Save the  variable contents to log
-        Log.i(getClass().getName(), (String.format("Retrieved settings %s, %s, %s", saved_username, saved_password)));
-        Log.d(getClass().getName(), String.format("About to create intent with %s", saved_username, saved_password));
+        Log.i(getClass().getName(), (String.format("Retrieved settings %s, %s", saved_username, saved_password)));
 
-        Toast.makeText(getApplicationContext(), String.format("Preferences %s %s:%s retrieved.",
+        Toast.makeText(getApplicationContext(), String.format("Preferences %s %s retrieved.",
                 saved_username, saved_password), Toast.LENGTH_SHORT).show();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -172,7 +171,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         SharedPreferences.Editor editor = sharedPrefs.edit();
 
         // save the sharedPreferences values
-        editor.putString(MainActivity.IS_LOGIN, "isLoggedIn");
+        editor.putString(MainActivity.IS_LOGIN, "true");
         editor.putString(MainActivity.KEY_USERNAME, "user5974");
         editor.putString(MainActivity.KEY_PASSWORD, "password51");
         // Why apply() and not commit() ?
