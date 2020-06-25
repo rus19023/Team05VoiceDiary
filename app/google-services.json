@@ -1,34 +1,57 @@
 {
   "project_info": {
+<<<<<<< HEAD
     "project_number": "718594650979",
     "firebase_url": "https://voicediary-df317.firebaseio.com",
     "project_id": "voicediary-df317",
     "storage_bucket": "voicediary-df317.appspot.com"
+=======
+    "project_number": "867965153438",
+    "firebase_url": "https://voice-diary-1591359065976.firebaseio.com",
+    "project_id": "voice-diary-1591359065976",
+    "storage_bucket": "voice-diary-1591359065976.appspot.com"
+>>>>>>> Doris
   },
   "client": [
     {
       "client_info": {
+<<<<<<< HEAD
         "mobilesdk_app_id": "1:718594650979:android:10c1fc38f9d1aff1de5956",
+=======
+        "mobilesdk_app_id": "1:867965153438:android:513d9e02e0049c87028b8f",
+>>>>>>> Doris
         "android_client_info": {
           "package_name": "com.voicediary"
         }
       },
       "oauth_client": [
         {
+<<<<<<< HEAD
           "client_id": "718594650979-ire1ni3lkenobjgbnq8j9puou3l8lvtd.apps.googleusercontent.com",
+=======
+          "client_id": "867965153438-kvikpkkb38ud89v3013guvl7b0eskkb1.apps.googleusercontent.com",
+>>>>>>> Doris
           "client_type": 3
         }
       ],
       "api_key": [
         {
+<<<<<<< HEAD
           "current_key": "AIzaSyAPgNPZQfEFbad5gwUCPHqii8-Sjo71pQg"
+=======
+          "current_key": "AIzaSyBXrmgcREjO8pC7PNojKkmxiBxHxs50rWQ"
+>>>>>>> Doris
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
+<<<<<<< HEAD
               "client_id": "718594650979-ire1ni3lkenobjgbnq8j9puou3l8lvtd.apps.googleusercontent.com",
+=======
+              "client_id": "867965153438-kvikpkkb38ud89v3013guvl7b0eskkb1.apps.googleusercontent.com",
+>>>>>>> Doris
               "client_type": 3
             }
           ]

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:text="@string/entry_management"
+        android:textSize="30sp" />
+
+    <ImageButton
+        android:id="@+id/imageBtnCreateFolder"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="161dp"
+        android:layout_marginEnd="79dp"
+        android:contentDescription="@string/save_new_entry"
+        android:onClick="saveNewEntry"
+        app:srcCompat="@drawable/ic_create_new_folder_lg" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="159dp"
+        android:contentDescription="@string/retrieve_entry"
+        android:onClick="retrieveEntry"
+        app:srcCompat="@drawable/retrieve" />
+
+</RelativeLayout>
