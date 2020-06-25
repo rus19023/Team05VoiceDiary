@@ -10,7 +10,7 @@ public class SoundRecorder {
 
     // record sound from the device using media
     public void startRecording(MainActivity context) {
-        Toast.makeText(context, "working conection to startRecording ", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "working connection to startRecording ", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In startRecording  ");
 
     }
@@ -18,7 +18,7 @@ public class SoundRecorder {
 
     // stop the recording from the device
     public void stopRecording(MainActivity context) {
-        Toast.makeText(context, "working conection to stopRecording", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "working connection to stopRecording", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In   stopRecording");
     }
 

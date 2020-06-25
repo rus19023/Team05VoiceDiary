@@ -18,12 +18,8 @@ public class UserPreferences {
     private static final String TAG = "Our Activity";
     private static final String PASSWORD = "password";
 
-
-
-
     public static void saveSharedPreferencesPassword(MainActivity context, String password) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF, Context.MODE_PRIVATE);
-
 
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -46,38 +42,6 @@ public class UserPreferences {
     }
 }
 
-
-  /* ----------- basic of Shared preferences -----------
-
-   create a share preference and a editor to work with that preference
-        SharedPreferences sharedPrefs = getSharedPreferences(MainActivity.APP_PREFS, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPrefs.edit();
-
-
- create a new instance of intent to receive data from another activity
-        Intent intent = getIntent();
-
-  get the data send by the intent invoked
-         book = intent.getStringExtra(MainActivity.EXTRA_MESSAGE1);
-         chapter = intent.getStringExtra(MainActivity.EXTRA_MESSAGE2);
-         verse = intent.getStringExtra(MainActivity.EXTRA_MESSAGE3);
-save the sharedPreferences values
-        editor.putString(MainActivity.EXTRA_MESSAGE1 ,book);
-
-        editor.putString(MainActivity.EXTRA_MESSAGE2 , chapter);
-
-        editor.putString(MainActivity.EXTRA_MESSAGE3 , verse);
-
-        // Why apply() and not commit() ?
-        // See: http://stackoverflow.com/questions/5960678/whats-the-difference-between-commit-and-apply-in-shared-preference
-        editor.apply();
-
-retrieve the sharedPreferences values
-
-        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-        int defaultValue = getResources().getInteger(R.integer.saved_high_score_default_key);
-        int highScore = sharedPref.getInt(getString(R.string.saved_high_score_key), defaultValue);
-*/
 
 
 
