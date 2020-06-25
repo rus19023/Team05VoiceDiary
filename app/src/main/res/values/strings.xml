@@ -39,7 +39,7 @@
     <string name="header_img_desc">Android icon</string>
     <string name="print_menu">Print Menu</string>
     <string name="manage_diary_entries">Manage Diary Entries</string>
-    <string name="new_journal_entry">New Journal Entry</string>
+    <string name="create_new_entry">Create New Diary Entry</string>
     <string name="save_new_entry">Save New Entry</string>
     <string name="view_transcription">View Transcription</string>
     <string name="connection">Connection</string>

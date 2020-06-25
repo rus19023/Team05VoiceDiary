@@ -99,12 +99,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    private void authenticateUser(View view){
+    public void authenticateUser(View view){
         Toast.makeText(this, "working connection to authenticateUser  ", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In authenticateUser");
     }
 
-    private void pauseRecording(View view){
+    public void pauseRecording(View view){
         Toast.makeText(this, "working connection to pauseRecording  ", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In pauseRecording");
     }
