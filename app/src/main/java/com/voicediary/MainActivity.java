@@ -20,9 +20,8 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private static final String TAG = "Our Activity" ;
-    private static final String VOICE_DIARY_PREFS = "voiceDiarySessionInfo";
     String transcription;
-    private static final String IS_LOGIN = "isLoggedIn";
+    private static final Boolean IS_LOGIN = false;
     public static final String KEY_USERNAME = "username";
     public static final String KEY_PASSWORD = "password";
     private DrawerLayout drawer;
@@ -32,21 +31,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
 
         /* ----------- basic of Shared preferences -----------*/
-        // create a share preference and a editor to work with that preferenc
+        // create a share preference and a editor to work with that preference
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         setContentView(R.layout.activity_main);
 
         // retrieve the sharedPreferences values
         String saved_username = sharedPrefs.getString("username", "");
         String saved_password = sharedPrefs.getString("password", "");
-        String saved_isLogin = sharedPrefs.getString("password", "");
 
         // Save the  variable contents to log
-        Log.i(getClass().getName(), (String.format("Retrieved settings %s, %s, %s", saved_isLogin, saved_username, saved_password)));
-        Log.d(getClass().getName(), String.format("About to create intent with %s", saved_isLogin, saved_username, saved_password));
+        Log.i(getClass().getName(), (String.format("Retrieved settings %s, %s, %s", saved_username, saved_password)));
+        Log.d(getClass().getName(), String.format("About to create intent with %s", saved_username, saved_password));
 
         Toast.makeText(getApplicationContext(), String.format("Preferences %s %s:%s retrieved.",
-                saved_isLogin, saved_username, saved_password), Toast.LENGTH_SHORT).show();
+                saved_username, saved_password), Toast.LENGTH_SHORT).show();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -93,7 +91,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -103,16 +100,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-
-
     private void authenticateUser(View view){
         Toast.makeText(this, "working connection to authenticateUser  ", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In authenticateUser");
     }
 
     private void pauseRecording(View view){
-        Toast.makeText(this, "working connection to authenticateUser  ", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In authenticateUser");
+        Toast.makeText(this, "working connection to pauseRecording  ", Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "In pauseRecording");
     }
     public void startRecording(View view) {
         Toast.makeText(this, "working connection to startRecording ", Toast.LENGTH_SHORT).show();
