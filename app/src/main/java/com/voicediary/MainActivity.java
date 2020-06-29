@@ -16,6 +16,9 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
+import static com.voicediary.R.id.nav_login;
+import static com.voicediary.R.id.nav_view;
+
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -26,19 +29,19 @@ public class MainActivity extends AppCompatActivity
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-
+    setContentView(R.layout.activity_main);
     Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
     drawer = findViewById(R.id.drawer_layout);
-    NavigationView navigationView = findViewById(R.id.nav_view);
+    NavigationView navigationView = findViewById(nav_view);
     navigationView.setNavigationItemSelectedListener(this);
     ActionBarDrawerToggle toggle =
-        new ActionBarDrawerToggle(
-            this,
-            drawer,
-            toolbar,
-            R.string.navigation_drawer_open,
-            R.string.navigation_drawer_close);
+            new ActionBarDrawerToggle(
+                    this,
+                    drawer,
+                    toolbar,
+                    R.string.navigation_drawer_open,
+                    R.string.navigation_drawer_close);
     drawer.addDrawerListener(toggle);
     toggle.syncState();
 
@@ -46,9 +49,9 @@ public class MainActivity extends AppCompatActivity
     //  separate fragments for register and login
     if (savedInstanceState == null) {
       getSupportFragmentManager()
-          .beginTransaction()
-          .replace(R.id.main_view, new RegisterLoginFragment())
-          .commit();
+              .beginTransaction()
+              .replace(R.id.main_view, new RegisterLoginFragment())
+              .commit();
       navigationView.setCheckedItem(R.id.nav_record);
     }
   }
