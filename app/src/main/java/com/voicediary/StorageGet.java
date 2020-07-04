@@ -1,13 +1,35 @@
 package com.voicediary;
 
+import android.net.Uri;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.io.File;
+import java.io.IOException;
+
 public class StorageGet implements Runnable {
     private static final String TAG = "Storage" ;
-    private String text;
-    MainActivity context;
+    private StorageReference storageReference;
 
+    public Uri getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(Uri filePath) {
+        this.filePath = filePath;
+    }
+
+    Uri filePath;
+    MainActivity context;
+    FirebaseStorage storage = FirebaseStorage.getInstance();
 
     @Override
     public void run() {
@@ -27,18 +49,33 @@ public class StorageGet implements Runnable {
                 e.printStackTrace();
             }
         }
+        getEntry();
     }
-        // store the new text entry received (shared preferences or firebase)
-        public boolean saveNewEntry() {
+    // store the new text entry received (shared preferences or firebase)
+    public boolean getEntry() {
+        StorageReference storageRef = storage.getReference();
+        StorageReference getRef = storage.getReferenceFromUrl(String.valueOf(filePath));
 
-            Toast.makeText(context, "working conection to  saveNewEntry", Toast.LENGTH_SHORT).show();
-            Log.d(TAG, "In   ");
-            return true;
+        File localFile = null;
+        try {
+            localFile = File.createTempFile("placeholder", "txt");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        getRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                // Local temp file has been created
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                // Handle any errors
+            }
+        });
+
+        Toast.makeText(context, "working connection to saveNewEntry", Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "In   ");
+        return true;
     }
-
-
-
-
-
-
+}

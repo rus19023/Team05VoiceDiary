@@ -1,18 +1,44 @@
 package com.voicediary;
 
+import android.net.Uri;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.*;
 
 
 public class StorageSave implements Runnable {
     private static final String TAG = "Storage" ;
-    private String text;
+    private String fileName;
+    private StorageReference storageReference;
+    private Uri filePath;
     MainActivity context;
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public Uri getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(Uri filePath) {
+        this.filePath = filePath;
+    }
 
     @Override
     public void run() {
-
+        storageReference = FirebaseStorage.getInstance().getReference();
         // We are creating a simple loop which will run and allow us to take
         // a look into how the different threads run.
         for (int i = 0; i < 100; i += 2) {
@@ -38,8 +64,24 @@ public class StorageSave implements Runnable {
 
     // store the new text entry received (shared preferences or firebase)
     public boolean saveNewEntry() {
+        // Where the file will be stored
+        StorageReference storageRef = storageReference.child(String.valueOf(filePath));
 
-        Toast.makeText(context, "working conection to  saveNewEntry", Toast.LENGTH_SHORT).show();
+        // What file is to be stored
+        storageRef.putFile(filePath)
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        Toast.makeText(context, exception.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
+
+        Toast.makeText(context, "working connection to saveNewEntry", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In   ");
         return true;
     }
@@ -47,11 +89,11 @@ public class StorageSave implements Runnable {
 
 
 
-    // search and retrieve an entry from storage
+    /* search and retrieve an entry from storage
     public String retrieveEntry() {
-        Toast.makeText(context, "working conection to retrieveEntry ", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "working connection to retrieveEntry ", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In  retrieveEntry ");
         return "";
-    }
+    }*/
 
 }
