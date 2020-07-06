@@ -10,18 +10,19 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="LOGCAT_FORMAT_STRING" value="%1$s %4$c/%5$s: %6$s" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c34468a-3edc-4202-97b2-02929ac369d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_19_3_1_aar.xml" afterDir="false" />
+    <list default="true" id="8c34468a-3edc-4202-97b2-02929ac369d7" name="Default Changelist" comment="starting work with authentication in firebase">
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_17_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_17_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_18_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_19_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/RegisterLoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/RegisterLoginFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/UserAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/UserAuthenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_login.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +86,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
@@ -209,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593461038498</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="starting work with authentication in firebase">
+      <created>1593693360339</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593693360339</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,13 +240,18 @@
     <MESSAGE value="first commit with main and async plus interface" />
     <MESSAGE value="third commit on wednesday" />
     <MESSAGE value="Monday Carlos All conections working, must check firebase connections" />
-    <option name="LAST_COMMIT_MESSAGE" value="Monday Carlos All conections working, must check firebase connections" />
+    <MESSAGE value="starting work with authentication in firebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting work with authentication in firebase" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="447" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1593642410278">
+    <state x="318" y="63" key="#PSD" timestamp="1594069542781">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="318" y="63" key="#PSD/0.0.1280.690@0.0.1280.690" timestamp="1594069542781" />
+    <state x="447" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1593700401787">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="447" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1593642410278" />
+    <state x="447" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1593700401787" />
     <state x="322" y="88" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1593439352977">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -248,58 +264,62 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="720" y="140" key="AndroidCreateXmlResourceDialog/0.0.1280.720@0.0.1280.720" timestamp="1593634782955" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1593461036633">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1593693671150">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1593461036633" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1593693671150" />
     <state x="94" y="94" width="1092" height="532" key="DiffContextDialog" timestamp="1593281531168">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="94" y="94" width="1092" height="532" key="DiffContextDialog/0.0.1280.720@0.0.1280.720" timestamp="1593281531168" />
-    <state x="422" y="115" key="FileChooserDialogImpl" timestamp="1593458999834">
+    <state x="422" y="115" key="FileChooserDialogImpl" timestamp="1593986706844">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="422" y="115" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1593458999834" />
-    <state width="1237" height="252" key="GridCell.Tab.0.bottom" timestamp="1593556550047">
+    <state x="422" y="115" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1593986706844" />
+    <state width="1237" height="236" key="GridCell.Tab.0.bottom" timestamp="1594068178677">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="236" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1594068178677" />
+    <state width="1237" height="252" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1594056391727" />
+    <state width="1237" height="236" key="GridCell.Tab.0.center" timestamp="1594068178677">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="236" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1594068178677" />
+    <state width="1237" height="252" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1594056391727" />
+    <state width="1237" height="236" key="GridCell.Tab.0.left" timestamp="1594068178677">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="236" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1594068178677" />
+    <state width="1237" height="252" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1594056391726" />
+    <state width="1237" height="236" key="GridCell.Tab.0.right" timestamp="1594068178677">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state width="1237" height="236" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1594068178677" />
+    <state width="1237" height="252" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1594056391727" />
+    <state width="675" height="168" key="GridCell.Tab.1.bottom" timestamp="1593821557309">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="252" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1593556550047" />
-    <state width="1237" height="252" key="GridCell.Tab.0.center" timestamp="1593556550046">
+    <state width="675" height="168" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1593821557309" />
+    <state width="675" height="168" key="GridCell.Tab.1.center" timestamp="1593821557309">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="252" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1593556550046" />
-    <state width="1237" height="252" key="GridCell.Tab.0.left" timestamp="1593556550043">
+    <state width="675" height="168" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1593821557309" />
+    <state width="675" height="168" key="GridCell.Tab.1.left" timestamp="1593821557308">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="252" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1593556550043" />
-    <state width="1237" height="252" key="GridCell.Tab.0.right" timestamp="1593556550047">
+    <state width="675" height="168" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1593821557308" />
+    <state width="675" height="168" key="GridCell.Tab.1.right" timestamp="1593821557309">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1237" height="252" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1593556550047" />
-    <state width="1237" height="376" key="GridCell.Tab.1.bottom" timestamp="1593459405828">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="376" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1593459405828" />
-    <state width="1237" height="376" key="GridCell.Tab.1.center" timestamp="1593459405828">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="376" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1593459405828" />
-    <state width="1237" height="376" key="GridCell.Tab.1.left" timestamp="1593459405828">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="376" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1593459405828" />
-    <state width="1237" height="376" key="GridCell.Tab.1.right" timestamp="1593459405828">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state width="1237" height="376" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1593459405828" />
+    <state width="675" height="168" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1593821557309" />
     <state x="150" y="3" key="SettingsEditor" timestamp="1593436889912">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="150" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1593436889912" />
-    <state x="234" y="93" key="Vcs.Push.Dialog.v2" timestamp="1593461056270">
+    <state x="234" y="93" key="Vcs.Push.Dialog.v2" timestamp="1593693678746">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="234" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1593461056270" />
+    <state x="234" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1593693678746" />
     <state width="646" height="366" key="XDebugger.FullValuePopup" timestamp="1593454244901">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -312,10 +332,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="94" y="94" width="1092" height="532" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1280.720@0.0.1280.720" timestamp="1593439568601" />
-    <state x="88" y="105" key="com.intellij.ide.util.TipDialog" timestamp="1593458392094">
+    <state x="88" y="105" key="com.intellij.ide.util.TipDialog" timestamp="1593986624903">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="88" y="105" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1593458392094" />
+    <state x="88" y="105" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1593986624903" />
     <state x="432" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593460976518">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

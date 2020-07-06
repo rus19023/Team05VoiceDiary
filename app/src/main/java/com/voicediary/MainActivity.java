@@ -22,7 +22,11 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static com.voicediary.R.id.fade;
 import static com.voicediary.R.id.nav_login;
@@ -35,21 +39,6 @@ public class MainActivity extends AppCompatActivity
   String transcription;
   private DrawerLayout drawer;
 
-  /*create variables to hold user information*/
-  private EditText userName;
-  private EditText userMail;
-  private EditText userPassword;
-  private Button userRegistrationBtn;
-
-  /*this came from the package firebase authentication */
-  FirebaseAuth userFirebase;
-  DatabaseReference usDatabase;
-
-  /*register variables*/
-
-  private String name ="";
-  private String eMail ="";
-  private String password ="";
 
 
 
@@ -74,43 +63,6 @@ public class MainActivity extends AppCompatActivity
 
     // *** need to figure out user registered/logged in logic and implement here ***
     //  separate fragments for register and login
-
-   /*need it variables and map to work with firebase*/
-    userFirebase = FirebaseAuth.getInstance();
-
-
-    /*instantiate user information*/
-    userName = (EditText) findViewById((R.id.userNameInput));
-    userMail = (EditText) findViewById((R.id.emailInput));
-    userPassword = (EditText) findViewById((R.id.password));
-    userRegistrationBtn = (Button) findViewById((R.id.registerUser));
-
-    userRegistrationBtn.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-
-        /*get information from the user*/
-        name = userName.getText().toString();
-        eMail = userMail.getText().toString();
-        password = userPassword.getText().toString();
-
-        /*control valid information and if valid perform register user method*/
-        if (!name.isEmpty() && !eMail.isEmpty() && !password.isEmpty()) {
-
-          if (password.length() >= 6) {
-            /*here is the call to register the user method*/
-            registerUser();
-          } else {
-            Toast.makeText(MainActivity.this, "Password must have at least 6 characters", Toast.LENGTH_SHORT).show();
-          }
-
-        } else {
-          Toast.makeText(MainActivity.this, "Must complette all fields", Toast.LENGTH_SHORT).show();
-        }
-
-
-      }
-    });
 
 
 
@@ -173,21 +125,6 @@ public class MainActivity extends AppCompatActivity
                   }
    */
 
-  /**
-   * This Method register the user in firebase authentication
-   */
-  private void registerUser() {
-    userFirebase.createUserWithEmailAndPassword(eMail, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-      @Override
-      public void onComplete(@NonNull Task<AuthResult> task) {
-        if (task.isSuccessful()) {
-
-        } else {
-            Toast.makeText(MainActivity.this, "User coudnt be register", Toast.LENGTH_SHORT).show();
-        }
-      }
-    });
-  }
 
 
 
@@ -226,11 +163,21 @@ public class MainActivity extends AppCompatActivity
         break;
       case R.id.nav_login:
         Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_view, new RegisterLoginFragment())
+
+                .commit();
+
         break;
       case R.id.nav_logout:
         Toast.makeText(this, "This menu item will connect to Logout", Toast.LENGTH_SHORT).show();
         break;
     }
+
+
+    Toast.makeText(this, "I am inmediatelly after item will connect to Login", Toast.LENGTH_SHORT).show();
+
     drawer.closeDrawer(GravityCompat.START);
     return true;
   }
@@ -246,6 +193,10 @@ public class MainActivity extends AppCompatActivity
 
   public void authenticateUser(View view) {
     Toast.makeText(this, "working connection to authenticateUser  ", Toast.LENGTH_SHORT).show();
+    UserAuthenticator newUser = new UserAuthenticator();
+    newUser.createUser(this);
+
+
     Log.d(TAG, "In authenticateUser");
   }
 
