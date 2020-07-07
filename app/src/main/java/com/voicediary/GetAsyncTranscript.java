@@ -13,7 +13,7 @@ public class GetAsyncTranscript implements Runnable {
 
     /**
      * Sets up the runnable to be called. It needs the MainActivity so it can run code on the
-     * UI thread, and also the voice recorded  so that it can get transcribe to text.
+     * UI thread, and also the voice recorded so that it can get transcribed to text.
      *
      * @param context
      * @param
@@ -23,8 +23,8 @@ public class GetAsyncTranscript implements Runnable {
         this.context = context;
         this.voiceRecord = voiceRecord;
 
-
     }
+
     @Override
     public void run() {
         // request transcription from the API

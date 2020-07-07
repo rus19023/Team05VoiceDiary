@@ -57,16 +57,13 @@ public class MainActivity extends AppCompatActivity
   }
   /* -------this is the format of a basic thread call-----
      // 1. Set up a new instance of our runnable object that will be run on the background thread
-
      GetAsyncTranscript getAsyncTranscript = new GetAsyncTranscript(this, voiceRecord);
 
     // 2. Set up the thread that will use our runnable object
-
      Thread t = new Thread(getAsyncTranscript);
 
      // 3. starts the thread in the background. It will automatically call the run method of
      // the getAsyncTranscript object we gave it earlier
-
      t.start();
   */
 
@@ -80,7 +77,6 @@ public class MainActivity extends AppCompatActivity
       // Now, call the function that will get the results from the API and then when it is done,
       // it will call the "handleResult" function on this new WeatherConditionsResultHandler
       // object that we are giving it.
-
       loader.getTranscription(voiceRecord, new VoiceTranscription() {
           @Override
           public void handleResult(VoiceTranscription voiceText) {

@@ -8,9 +8,6 @@ public class StorageDelete implements Runnable {
     private String text;
     MainActivity context;
 
-
-
-
     @Override
     public void run() {
 

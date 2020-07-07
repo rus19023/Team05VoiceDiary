@@ -41,6 +41,20 @@
             app:srcCompat="@drawable/ic_request_lg" />
 
         <ImageButton
+            android:id="@+id/imageBtnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@color/design_default_color_background"
+            android:elevation="6dp"
+            android:onClick="requestTranscription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.031"
+            app:layout_constraintStart_toEndOf="@+id/imageBtnSave"
+            app:layout_constraintTop_toBottomOf="@+id/imageBtnRecordStop"
+            app:srcCompat="@drawable/ic_request_lg" />
+
+        <ImageButton
             android:id="@+id/imageBtnPause"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

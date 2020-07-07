@@ -8,7 +8,6 @@ public class StorageGet implements Runnable {
     private String text;
     MainActivity context;
 
-
     @Override
     public void run() {
 

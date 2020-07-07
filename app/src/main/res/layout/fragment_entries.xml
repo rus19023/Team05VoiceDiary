@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
         android:text="@string/entry_management"
-        android:textSize="30sp" />
+        android:textSize="30sp"/>
 
     <ImageButton
         android:id="@+id/imageBtnCreateFolder"
@@ -26,8 +26,8 @@
         android:onClick="saveNewEntry"
         app:srcCompat="@drawable/ic_create_new_folder_lg" />
 
-    <ImageView
-        android:id="@+id/imageView"
+    <ImageButton
+        android:id="@+id/imageBtnRetrieveEntry"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_alignParentStart="true"

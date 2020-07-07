@@ -8,6 +8,12 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+/**
+ * Opens page to manage diary entries.
+ * @author Doris Rush-Lopez, Carlos Gerez, Gabriel Hayes, Joseph Itiose
+ * @version 1.0
+ * @since 1.0
+ */
 public class EntriesFragment extends Fragment {
     @Nullable
     @Override

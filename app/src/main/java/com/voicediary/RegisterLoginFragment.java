@@ -17,6 +17,6 @@ public class RegisterLoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.d(TAG, "In  register login ");
 
-        return inflater.inflate(R.layout.fragment_recording, container, false);
+        return inflater.inflate(R.layout.fragment_register, container, false);
     }
 }
