@@ -122,7 +122,7 @@ public class UserAuthenticator {
                     Map<String, Object> map = new HashMap<>();
                     map.put("name", name);
                     map.put("email", eMail);
-                    map.put("name", password);
+                    map.put("password", password);
 
                     /*this is the id created to the user in firebase authentication*/
                     String id = userFirebase.getCurrentUser().getUid();
