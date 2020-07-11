@@ -4,10 +4,22 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 30
     buildToolsVersion "29.0.3"
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/INDEX.LIST'
+        exclude("META-INF/*.kotlin_module")
+    }
 
     defaultConfig {
         applicationId "com.voicediary"
-        minSdkVersion 23
+        minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -46,11 +58,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.google.firebase:firebase-database:19.3.1'
-    implementation 'com.google.firebase:firebase-analytics:17.4.3'
-    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'com.google.firebase:firebase-analytics:17.4.4'
+    implementation 'com.google.cloud:google-cloud-speech:1.24.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     // For control over item selection of both touch and mouse driven selection
-    implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc01"
-    implementation "androidx.cardview:cardview:1.0.0"
-
-
+    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0-rc01'
+    implementation 'androidx.cardview:cardview:1.0.0'
 }

@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.SharedPreferences;
+import android.media.AudioRecord;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -55,17 +56,7 @@ public class MainActivity extends AppCompatActivity
       navigationView.setCheckedItem(R.id.nav_record);
     }
   }
-  /* -------this is the format of a basic thread call-----
-     // 1. Set up a new instance of our runnable object that will be run on the background thread
-     GetAsyncTranscript getAsyncTranscript = new GetAsyncTranscript(this, voiceRecord);
 
-    // 2. Set up the thread that will use our runnable object
-     Thread t = new Thread(getAsyncTranscript);
-
-     // 3. starts the thread in the background. It will automatically call the run method of
-     // the getAsyncTranscript object we gave it earlier
-     t.start();
-  */
 
   /* ---------this is one of the ways we can implement the thread that respond to the call-------
    @Override
@@ -97,7 +88,7 @@ public class MainActivity extends AppCompatActivity
 
   // show transcription received
   public String seeTranscription() {
-    Toast.makeText(this, "working conection to seeTranscription ", Toast.LENGTH_SHORT).show();
+    Toast.makeText(this, "working connection to seeTranscription ", Toast.LENGTH_SHORT).show();
     Log.d(TAG, "In  seeTranscription ");
     return transcription;
   }
@@ -108,7 +99,8 @@ public class MainActivity extends AppCompatActivity
       case R.id.nav_record:
         getSupportFragmentManager()
             .beginTransaction()
-            .replace(R.id.main_view, new RegisterLoginFragment())
+            //.replace(R.id.main_view, new RegisterLoginFragment())
+              .replace(R.id.main_view, new RecordingFragment())
             .commit();
         break;
       case R.id.nav_print_menu:
@@ -154,6 +146,10 @@ public class MainActivity extends AppCompatActivity
   }
 
   public void startRecording(View view) {
+
+    AudioRecorder myrecorder = new AudioRecorder();
+    //myrecorder.;
+
     Toast.makeText(this, "working connection to startRecording ", Toast.LENGTH_SHORT).show();
     Log.d(TAG, "In startRecording");
   }
@@ -184,6 +180,7 @@ public class MainActivity extends AppCompatActivity
   }
 
   public void retrieveEntry(View view) {
+
     Toast.makeText(this, "working connection to retrieveEntry ", Toast.LENGTH_SHORT).show();
     Log.d(TAG, "In  retrieveEntry");
   }
