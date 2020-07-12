@@ -46,11 +46,20 @@ public class MainActivity extends AppCompatActivity
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+
+
     Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
+
+
+
     drawer = findViewById(R.id.drawer_layout);
     NavigationView navigationView = findViewById(nav_view);
     navigationView.setNavigationItemSelectedListener(this);
+
+
+
     ActionBarDrawerToggle toggle =
             new ActionBarDrawerToggle(
                     this,
@@ -68,11 +77,6 @@ public class MainActivity extends AppCompatActivity
 
 
 
-
-
-
-
-
     if (savedInstanceState == null) {
       getSupportFragmentManager()
               .beginTransaction()
@@ -81,55 +85,6 @@ public class MainActivity extends AppCompatActivity
       navigationView.setCheckedItem(R.id.nav_record);
     }
   }
-  /* -------this is the format of a basic thread call-----
-     // 1. Set up a new instance of our runnable object that will be run on the background thread
-
-     GetAsyncTranscript getAsyncTranscript = new GetAsyncTranscript(this, voiceRecord);
-
-    // 2. Set up the thread that will use our runnable object
-
-     Thread t = new Thread(getAsyncTranscript);
-
-     // 3. starts the thread in the background. It will automatically call the run method of
-     // the getAsyncTranscript object we gave it earlier
-
-     t.start();
-  */
-
-  /* ---------this is one of the ways we can implement the thread that respond to the call-------
-   @Override
-  public void run() {
-      // This is the function that will be run on the background thread.
-
-      VoiceTranscriptionLoader loader = new VoiceTranscriptionLoader();
-
-      // Now, call the function that will get the results from the API and then when it is done,
-      // it will call the "handleResult" function on this new WeatherConditionsResultHandler
-      // object that we are giving it.
-
-      loader.getTranscription(voiceRecord, new VoiceTranscription() {
-          @Override
-          public void handleResult(VoiceTranscription voiceText) {
-
-              // At this point we will be back from the API with the results stored in `voiceText`
-
-              // Next, we need to run the function that will update the UI elements, but this
-              // must be run on the UI thread
-
-              activity.runOnUiThread(new Runnable() {
-                  @Override
-                  public void run() {
-                      // This is code that will now run on the UI thread. Call the function in
-                      // MainActivity that will update the UI correctly.
-                      activity.receiveText(voiceText);
-                  }
-   */
-
-
-
-
-
-
 
 
 
@@ -146,7 +101,7 @@ public class MainActivity extends AppCompatActivity
       case R.id.nav_record:
         getSupportFragmentManager()
             .beginTransaction()
-            .replace(R.id.main_view, new RegisterLoginFragment())
+            .replace(R.id.main_view, new EntriesFragment())
             .commit();
         break;
       case R.id.nav_print_menu:
@@ -165,7 +120,7 @@ public class MainActivity extends AppCompatActivity
         Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.main_view, new RegisterLoginFragment())
+                .replace(R.id.main_view, new LoginFragment())
 
                 .commit();
 
