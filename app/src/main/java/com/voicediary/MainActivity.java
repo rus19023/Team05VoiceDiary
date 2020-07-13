@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -127,6 +129,8 @@ public class MainActivity extends AppCompatActivity
         break;
       case R.id.nav_logout:
         Toast.makeText(this, "This menu item will connect to Logout", Toast.LENGTH_SHORT).show();
+        UserAuthenticator newUser = new UserAuthenticator();
+        newUser.logOutUser(this);
         break;
     }
 

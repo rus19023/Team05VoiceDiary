@@ -1,5 +1,6 @@
 package com.voicediary;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -7,6 +8,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -18,6 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Map;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 public class UserAuthenticator {
 
     /*create variables to hold user information*/
@@ -25,6 +31,9 @@ public class UserAuthenticator {
     private EditText userMail;
     private EditText userPassword;
     private Button userRegistrationBtn;
+
+
+    private DrawerLayout drawer;
 
     /*this came from the package firebase authentication */
     FirebaseAuth userFirebase;
@@ -46,8 +55,6 @@ public class UserAuthenticator {
         String eMail = "";
         String password = "";
     }
-
-
 
 
     // Password authentication in firebase
@@ -73,34 +80,28 @@ public class UserAuthenticator {
         userPassword = (EditText) context.findViewById((R.id.password));
         userRegistrationBtn = (Button) context.findViewById((R.id.registerUser));
 
-        userRegistrationBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                /*get information from the user*/
-                name = userName.getText().toString();
-                eMail = userMail.getText().toString();
-                password = userPassword.getText().toString();
-
-                /*control valid information and if valid perform register user method*/
-                if (!name.isEmpty() && !eMail.isEmpty() && !password.isEmpty()) {
-
-                    /*here is the call to register the user method*/
-                    if (password.length() >= 6) {
-                        registerUser(view);
-                    } else {
-                        Toast.makeText(context,
-                                "Password must have at least 6 characters",
-                                Toast.LENGTH_SHORT).show();
-                    }
-
-                } else {
-                    Toast.makeText(context, "Must complette all fields", Toast.LENGTH_SHORT).show();
-                }
 
 
+        /*get information from the user*/
+        name = userName.getText().toString();
+        eMail = userMail.getText().toString();
+        password = userPassword.getText().toString();
+
+        /*control valid information and if valid perform register user method*/
+        if (!name.isEmpty() && !eMail.isEmpty() && !password.isEmpty()) {
+
+            /*here is the call to register the user method*/
+            if (password.length() >= 6) {
+                registerUser(context);
+            } else {
+                Toast.makeText(context,
+                        "Password must have at least 6 characters",
+                        Toast.LENGTH_SHORT).show();
             }
-        });
+
+        } else {
+            Toast.makeText(context, "Must complette all fields", Toast.LENGTH_SHORT).show();
+        }
 
 
         Toast.makeText(context, "working connection to authenticateUser  ", Toast.LENGTH_SHORT).show();
@@ -113,7 +114,14 @@ public class UserAuthenticator {
     /**
      * This Method register the user in firebase authentication
      */
-    private void registerUser(final View view) {
+
+    /**
+     * Create a new user in Firebase Authenticator, receiving name, email and password  from the view
+     * Register the new user in firebase realtime database
+     *
+     * @param context return Void
+     */
+    private void registerUser(final MainActivity context) {
         userFirebase.createUserWithEmailAndPassword(eMail, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -133,17 +141,34 @@ public class UserAuthenticator {
                         public void onComplete(@NonNull Task<Void> task2) {
                             if (task2.isSuccessful()) {
                                 /*here we send the user to the activity or fragment to initiate the app and put finish to don't return here*/
-                                Toast.makeText(view.getContext(), "succsesful login", Toast.LENGTH_SHORT).show();
-
+                                Toast.makeText(context, "succsesful login", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(context, MainActivity.class);
+                                startActivity(context, intent, null);
+                                context.finish();
                             }
                         }
                     });
 
 
                 } else {
-                    Toast.makeText(view.getContext(), "User couldn't be register", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "User couldn't be register", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    public void loginUser(View view) {
+
+
+    }
+
+    public void logOutUser(MainActivity context) {
+        userFirebase = FirebaseAuth.getInstance();
+        userFirebase.signOut();
+        Intent intent = new Intent(context, MainActivity.class);
+        startActivity(context, intent, null);
+        context.finish();
+
+
     }
 }

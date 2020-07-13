@@ -15,8 +15,19 @@
   <component name="ChangeListManager">
     <list default="true" id="8c34468a-3edc-4202-97b2-02929ac369d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/LoginFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/UserAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/UserAuthenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/data/LoginDataSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/data/LoginRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/data/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/data/model/LoggedInUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/ui/login/LoggedInUserView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/ui/login/LoginActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/ui/login/LoginFormState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/ui/login/LoginResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/ui/login/LoginViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/ui/login/LoginViewModelFactory.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_register.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594491922899</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="First commit monday, changes in menu working in all directions well, creating new user.">
+      <created>1594593300469</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594593300469</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,7 +263,8 @@
     <MESSAGE value="Monday Carlos All conections working, must check firebase connections" />
     <MESSAGE value="starting work with authentication in firebase" />
     <MESSAGE value="first commit on saturday 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit on saturday 11" />
+    <MESSAGE value="First commit monday, changes in menu working in all directions well, creating new user." />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit monday, changes in menu working in all directions well, creating new user." />
   </component>
   <component name="WindowStateProjectService">
     <state x="318" y="63" key="#PSD" timestamp="1594069542781">
@@ -260,6 +279,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="322" y="88" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.720@0.0.1280.720" timestamp="1593439352977" />
+    <state x="372" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594644770731">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="372" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.690@0.0.1280.690" timestamp="1594644770731" />
     <state x="388" y="70" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1593557235271">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -268,10 +291,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="720" y="140" key="AndroidCreateXmlResourceDialog/0.0.1280.720@0.0.1280.720" timestamp="1593634782955" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1594593248762">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1594644962544">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1594593248762" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1594644962544" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1593693671150" />
     <state x="94" y="94" width="1092" height="532" key="DiffContextDialog" timestamp="1593281531168">
       <screen x="0" y="0" width="1280" height="720" />
@@ -281,25 +304,9 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="422" y="115" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1593986706844" />
-    <state width="1237" height="-40" key="GridCell.Tab.0.bottom" timestamp="1594593248876">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state width="1237" height="-40" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1594593248876" />
     <state width="1237" height="252" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1594056391727" />
-    <state width="1237" height="-40" key="GridCell.Tab.0.center" timestamp="1594593248876">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state width="1237" height="-40" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1594593248876" />
     <state width="1237" height="252" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1594056391727" />
-    <state width="1237" height="-40" key="GridCell.Tab.0.left" timestamp="1594593248875">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state width="1237" height="-40" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1594593248875" />
     <state width="1237" height="252" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1594056391726" />
-    <state width="1237" height="-40" key="GridCell.Tab.0.right" timestamp="1594593248876">
-      <screen x="0" y="0" width="1280" height="690" />
-    </state>
-    <state width="1237" height="-40" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1594593248876" />
     <state width="1237" height="252" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1594056391727" />
     <state width="675" height="168" key="GridCell.Tab.1.bottom" timestamp="1593821557309">
       <screen x="0" y="0" width="1280" height="720" />
@@ -321,9 +328,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="150" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1593436889912" />
-    <state x="234" y="93" key="Vcs.Push.Dialog.v2" timestamp="1593693678746">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="234" y="89" key="Vcs.Push.Dialog.v2" timestamp="1594593324980">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
+    <state x="234" y="89" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1594593324980" />
     <state x="234" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1593693678746" />
     <state width="646" height="366" key="XDebugger.FullValuePopup" timestamp="1593454244901">
       <screen x="0" y="0" width="1280" height="720" />
@@ -337,10 +345,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="94" y="94" width="1092" height="532" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1280.720@0.0.1280.720" timestamp="1593439568601" />
-    <state x="88" y="101" key="com.intellij.ide.util.TipDialog" timestamp="1594585348664">
+    <state x="88" y="101" key="com.intellij.ide.util.TipDialog" timestamp="1594638936552">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="88" y="101" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1594585348664" />
+    <state x="88" y="101" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1594638936552" />
     <state x="88" y="105" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1593986624903" />
     <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594593177602">
       <screen x="0" y="0" width="1280" height="690" />
