@@ -150,6 +150,10 @@ public class MainActivity extends AppCompatActivity
     }
   }
 
+  /**
+   * Register a new user in the system
+   * @param view
+   */
   public void authenticateUser(View view) {
     Toast.makeText(this, "working connection to authenticateUser  ", Toast.LENGTH_SHORT).show();
     UserAuthenticator newUser = new UserAuthenticator();
@@ -220,7 +224,10 @@ public class MainActivity extends AppCompatActivity
   }
 
   public void loginUser(View view) {
-    Toast.makeText(this, "working connection to loginUser", Toast.LENGTH_SHORT).show();
+    Toast.makeText(this, "working connection to login User", Toast.LENGTH_SHORT).show();
+
+    UserAuthenticator newUser = new UserAuthenticator();
+    newUser.loginUserAction(this);
     Log.d(TAG, "In loginUser  ");
   }
 

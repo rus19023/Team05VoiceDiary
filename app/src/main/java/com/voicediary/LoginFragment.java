@@ -24,7 +24,7 @@ public class LoginFragment extends Fragment {
 
   }
 
-  public void userLogin(View view) {
+  /*public void userLogin(View view) {
     // check internet connection
    // CheckInternet checkInternet = new CheckInternet();
    // if (!checkInternet.isConnected(Login.this));
@@ -54,6 +54,6 @@ public class LoginFragment extends Fragment {
 
   public void userLogout() {
 
-  }
+  }*/
 
 }

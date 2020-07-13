@@ -2,14 +2,11 @@ package com.voicediary;
 
 import android.content.Intent;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,7 +27,6 @@ public class UserAuthenticator {
     private EditText userName;
     private EditText userMail;
     private EditText userPassword;
-    private Button userRegistrationBtn;
 
 
     private DrawerLayout drawer;
@@ -58,18 +54,14 @@ public class UserAuthenticator {
 
 
     // Password authentication in firebase
-    private boolean authenticateUser(MainActivity context) {
-        Toast.makeText(context, "working connection to authenticateUser inside the class  ", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In authenticateUser  ");
-        return true;
-    }
+
 
     // create a new user in firebase
     public boolean createUser(final MainActivity context) {
 
         /*need it variables to work with firebase*/
         userFirebase = FirebaseAuth.getInstance();
-        Toast.makeText(context, "working connection to createeUser inside the class  ", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "working connection to createe User inside the class  ", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In createUser  ");
         /*reference to the base node of firebase database*/
         usDatabase = FirebaseDatabase.getInstance().getReference();
@@ -78,7 +70,7 @@ public class UserAuthenticator {
         userName = (EditText) context.findViewById((R.id.userNameInput));
         userMail = (EditText) context.findViewById((R.id.emailInput));
         userPassword = (EditText) context.findViewById((R.id.password));
-        userRegistrationBtn = (Button) context.findViewById((R.id.registerUser));
+        Button userRegistrationBtn = (Button) context.findViewById((R.id.registerUser));
 
 
 
@@ -157,14 +149,61 @@ public class UserAuthenticator {
         });
     }
 
-    public void loginUser(View view) {
+
+    public void loginUserAction(MainActivity context) {
+
+            /*get the information from the user*/
+       userMail = (EditText) context.findViewById((R.id.email));
+        userPassword = (EditText) context.findViewById((R.id.password));
 
 
+        eMail = userMail.getText().toString();
+        password = userPassword.getText().toString();
+        if (!eMail.isEmpty() && (!password.isEmpty())) {
+                login(eMail, password, context);
+        }
+        else{
+            Toast.makeText(context, "Must complete all fields.", Toast.LENGTH_SHORT).show();
+        }
     }
 
-    public void logOutUser(MainActivity context) {
+
+
+    private void login(String eMail, String password, final MainActivity context) {
         userFirebase = FirebaseAuth.getInstance();
+        userFirebase.signInWithEmailAndPassword(eMail, password).addOnCompleteListener
+                (new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Intent intent = new Intent(context, MainActivity.class);
+                            startActivity(context, intent, null);
+                            Toast.makeText(context, "SUCCSESS LOGIN", Toast.LENGTH_SHORT).show();
+                            context.finish();
+                        }
+                        else{
+                            Toast.makeText(context, "Couldn't start session, must review your input.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                }
+        );
+    }
+
+    /**
+     * logOutUser method take an user and log out from the firebase authentication system
+     * @param context
+     */
+
+    public void logOutUser(MainActivity context) {
+
+        /* get an instance of the firebase class*/
+        userFirebase = FirebaseAuth.getInstance();
+
+        /*apply the method signout from the FirebaseAuth class to my object*/
         userFirebase.signOut();
+        Toast.makeText(context, "SUCCESS LOGOUT", Toast.LENGTH_SHORT).show();
+        /*back to Main Activity*/
         Intent intent = new Intent(context, MainActivity.class);
         startActivity(context, intent, null);
         context.finish();
@@ -172,3 +211,4 @@ public class UserAuthenticator {
 
     }
 }
+
