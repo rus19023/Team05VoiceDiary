@@ -30,15 +30,19 @@
     <list default="true" id="8c34468a-3edc-4202-97b2-02929ac369d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/LoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/LoginFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/UserAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/UserAuthenticator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_login.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_Edited_API_R" />
   <component name="ExternalProjectsData">
@@ -49,6 +53,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/..">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -92,16 +99,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
+    <option name="BUILD_VARIANTS_TAB" value="Build Types" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RunManager" selected="Android App.app">
     <configuration name="ExampleUnitTest.addition_isCorrect" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
@@ -253,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594645014971</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Last on Monday all authentication working must implement the restrictions">
+      <created>1594669669412</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1594669669413</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,13 +297,14 @@
     <MESSAGE value="first commit on saturday 11" />
     <MESSAGE value="First commit monday, changes in menu working in all directions well, creating new user." />
     <MESSAGE value="Second commit monday, erased unused classes. logout functional." />
-    <option name="LAST_COMMIT_MESSAGE" value="Second commit monday, erased unused classes. logout functional." />
+    <MESSAGE value="Last on Monday all authentication working must implement the restrictions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last on Monday all authentication working must implement the restrictions" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="318" y="63" key="#PSD" timestamp="1594069542781">
+    <state x="256" y="84" width="919" height="535" key="#PSD" timestamp="1594734963950">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="318" y="63" key="#PSD/0.0.1280.690@0.0.1280.690" timestamp="1594069542781" />
+    <state x="256" y="84" width="919" height="535" key="#PSD/0.0.1280.690@0.0.1280.690" timestamp="1594734963950" />
     <state x="447" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1593700401787">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -304,18 +325,19 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="720" y="140" key="AndroidCreateXmlResourceDialog/0.0.1280.720@0.0.1280.720" timestamp="1593634782955" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1594645012984">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1594669667069">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1594645012984" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1594669667069" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1593693671150" />
     <state x="94" y="94" width="1092" height="532" key="DiffContextDialog" timestamp="1593281531168">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="94" y="94" width="1092" height="532" key="DiffContextDialog/0.0.1280.720@0.0.1280.720" timestamp="1593281531168" />
-    <state x="422" y="115" key="FileChooserDialogImpl" timestamp="1593986706844">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="422" y="110" key="FileChooserDialogImpl" timestamp="1594732074017">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
+    <state x="422" y="110" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1594732074017" />
     <state x="422" y="115" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1593986706844" />
     <state width="789" height="296" key="GridCell.Tab.0.bottom" timestamp="1594662204430">
       <screen x="0" y="0" width="1280" height="690" />
@@ -357,9 +379,10 @@
     </state>
     <state width="1237" height="219" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1594657712270" />
     <state width="675" height="168" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1593821557309" />
-    <state x="150" y="3" key="SettingsEditor" timestamp="1593436889912">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="150" y="0" key="SettingsEditor" timestamp="1594733870437">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
+    <state x="150" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1594733870437" />
     <state x="150" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1593436889912" />
     <state x="234" y="89" key="Vcs.Push.Dialog.v2" timestamp="1594645030098">
       <screen x="0" y="0" width="1280" height="690" />
@@ -378,15 +401,15 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="94" y="94" width="1092" height="532" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1280.720@0.0.1280.720" timestamp="1593439568601" />
-    <state x="88" y="101" key="com.intellij.ide.util.TipDialog" timestamp="1594638936552">
+    <state x="88" y="101" key="com.intellij.ide.util.TipDialog" timestamp="1594727741669">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="88" y="101" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1594638936552" />
+    <state x="88" y="101" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1594727741669" />
     <state x="88" y="105" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1593986624903" />
-    <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594593177602">
+    <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594763573579">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1594593177602" />
+    <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1594763573579" />
     <state x="432" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1593460976518" />
     <state x="411" y="189" key="edit.logcat.filter.dialog.dimensions" timestamp="1594658760516">
       <screen x="0" y="0" width="1280" height="690" />
@@ -397,5 +420,13 @@
     </state>
     <state x="344" y="145" key="git4idea.merge.GitPullDialog/0.0.1280.690@0.0.1280.690" timestamp="1594669607072" />
     <state x="344" y="151" key="git4idea.merge.GitPullDialog/0.0.1280.720@0.0.1280.720" timestamp="1593281424414" />
+    <state x="538" y="71" key="psd.add.library.dependency.panel.dimension" timestamp="1594734935188">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="538" y="71" key="psd.add.library.dependency.panel.dimension/0.0.1280.690@0.0.1280.690" timestamp="1594734935188" />
+    <state x="298" y="154" width="672" height="677" key="run.anything.popup" timestamp="1594732088284">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="298" y="154" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1594732088284" />
   </component>
 </project>

@@ -1,5 +1,13 @@
 package com.voicediary;
 
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,31 +15,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.auth.FirebaseUser;
 
-
-import java.util.HashMap;
-import java.util.Map;
-
-import static com.voicediary.R.id.fade;
-import static com.voicediary.R.id.nav_login;
 import static com.voicediary.R.id.nav_view;
 
 public class MainActivity extends AppCompatActivity
@@ -75,17 +62,21 @@ public class MainActivity extends AppCompatActivity
     // *** need to figure out user registered/logged in logic and implement here ***
     //  separate fragments for register and login
 
-
-
-
-
-    if (savedInstanceState == null) {
+    // we check here that the user is logged in , if not we run register
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    if (user != null) {
+      // User is signed in
+    } else {
+      // No user is signed in
       getSupportFragmentManager()
               .beginTransaction()
               .replace(R.id.main_view, new RegisterLoginFragment())
               .commit();
       navigationView.setCheckedItem(R.id.nav_record);
     }
+
+
+
   }
 
 
@@ -99,7 +90,9 @@ public class MainActivity extends AppCompatActivity
 
   @Override
   public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     switch (item.getItemId()) {
+
       case R.id.nav_record:
         getSupportFragmentManager()
             .beginTransaction()
@@ -118,7 +111,7 @@ public class MainActivity extends AppCompatActivity
             .replace(R.id.main_view, new EntriesFragment())
             .commit();
         break;
-      case R.id.nav_login:
+      case R.id.nav_login :
         Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
         getSupportFragmentManager()
                 .beginTransaction()
@@ -223,6 +216,10 @@ public class MainActivity extends AppCompatActivity
     Log.d(TAG, "In onRevertclick");
   }
 
+  /**
+   * Login the user in the app
+   * @param view
+   */
   public void loginUser(View view) {
     Toast.makeText(this, "working connection to login User", Toast.LENGTH_SHORT).show();
 
