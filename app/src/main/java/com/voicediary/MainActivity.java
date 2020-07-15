@@ -94,27 +94,30 @@ public class MainActivity extends AppCompatActivity
   @Override
   public boolean onNavigationItemSelected(@NonNull MenuItem item) {
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    if (user != null){
+      /*user is signed in*/
+
     switch (item.getItemId()) {
 
       case R.id.nav_record:
         getSupportFragmentManager()
-            .beginTransaction()
-            .replace(R.id.main_view, new EntriesFragment())
-            .commit();
+                .beginTransaction()
+                .replace(R.id.main_view, new EntriesFragment())
+                .commit();
         break;
       case R.id.nav_print_menu:
         getSupportFragmentManager()
-            .beginTransaction()
-            .replace(R.id.main_view, new PrintMenuFragment())
-            .commit();
+                .beginTransaction()
+                .replace(R.id.main_view, new PrintMenuFragment())
+                .commit();
         break;
       case R.id.nav_entries:
         getSupportFragmentManager()
-            .beginTransaction()
-            .replace(R.id.main_view, new EntriesFragment())
-            .commit();
+                .beginTransaction()
+                .replace(R.id.main_view, new EntriesFragment())
+                .commit();
         break;
-      case R.id.nav_login :
+      case R.id.nav_login:
         Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
         getSupportFragmentManager()
                 .beginTransaction()
@@ -129,6 +132,11 @@ public class MainActivity extends AppCompatActivity
         newUser.logOutUser(this);
         break;
     }
+    }
+    else{
+      Toast.makeText(this, "You must sign in to use the app, please sign inn. ", Toast.LENGTH_SHORT).show();
+    }
+
 
 
     Toast.makeText(this, "I am inmediatelly after item will connect to Login", Toast.LENGTH_SHORT).show();
@@ -232,6 +240,7 @@ public class MainActivity extends AppCompatActivity
 
   /**
    * Login the user in the app
+   * create an UserAuthenticator object and use the method to login him from the class UserAuthenticator
    * @param view
    */
   public void loginUser(View view) {

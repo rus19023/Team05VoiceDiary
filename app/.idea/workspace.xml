@@ -30,7 +30,6 @@
     <list default="true" id="8c34468a-3edc-4202-97b2-02929ac369d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_register.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594763646181</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="All screens working correctly and linking to the right place, the app secure the right user in and out and if nesssesary register a new one.">
+      <created>1594807970392</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1594807970393</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -302,7 +308,8 @@
     <MESSAGE value="Second commit monday, erased unused classes. logout functional." />
     <MESSAGE value="Last on Monday all authentication working must implement the restrictions" />
     <MESSAGE value="All authentication working , just one button dont fix yet in register to go to LoginFragment" />
-    <option name="LAST_COMMIT_MESSAGE" value="All authentication working , just one button dont fix yet in register to go to LoginFragment" />
+    <MESSAGE value="All screens working correctly and linking to the right place, the app secure the right user in and out and if nesssesary register a new one." />
+    <option name="LAST_COMMIT_MESSAGE" value="All screens working correctly and linking to the right place, the app secure the right user in and out and if nesssesary register a new one." />
   </component>
   <component name="WindowStateProjectService">
     <state x="256" y="84" width="919" height="535" key="#PSD" timestamp="1594734963950">
@@ -329,10 +336,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="720" y="140" key="AndroidCreateXmlResourceDialog/0.0.1280.720@0.0.1280.720" timestamp="1593634782955" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1594763644016">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1594807968861">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1594763644016" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1594807968861" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1593693671150" />
     <state x="94" y="94" width="1092" height="532" key="DiffContextDialog" timestamp="1593281531168">
       <screen x="0" y="0" width="1280" height="720" />
@@ -388,10 +395,10 @@
     </state>
     <state x="150" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1594733870437" />
     <state x="150" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1593436889912" />
-    <state x="234" y="89" key="Vcs.Push.Dialog.v2" timestamp="1594763659580">
+    <state x="234" y="89" key="Vcs.Push.Dialog.v2" timestamp="1594808026642">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="234" y="89" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1594763659580" />
+    <state x="234" y="89" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1594808026642" />
     <state x="234" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1593693678746" />
     <state width="646" height="366" key="XDebugger.FullValuePopup" timestamp="1593454244901">
       <screen x="0" y="0" width="1280" height="720" />
