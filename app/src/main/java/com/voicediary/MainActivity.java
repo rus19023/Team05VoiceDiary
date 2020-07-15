@@ -172,9 +172,35 @@ public class MainActivity extends AppCompatActivity
     Log.d(TAG, "In pauseRecording");
   }
 
-  public void startRecording(View view) {
-    Toast.makeText(this, "working connection to startRecording ", Toast.LENGTH_SHORT).show();
+  /**
+   * This method call the layout to reestablish a new password.
+   * @param view
+   */
+  public void resetPassword(View view) {
+    Toast.makeText(this, "working connection to resetPassword ", Toast.LENGTH_SHORT).show();
     Log.d(TAG, "In startRecording");
+
+    Toast.makeText(this, "working connection to reset password", Toast.LENGTH_SHORT).show();
+    Log.d(TAG, "In resetpassword");
+    getSupportFragmentManager()
+            .beginTransaction()
+            .replace(R.id.main_view, new ResetPasswordFragment())
+
+            .commit();
+
+
+  }
+
+
+
+  /**
+   * This method is call by the button in the reset password layout and send an email to reset password.
+   * @param view
+   */
+  public void resetUser( View view){
+    UserAuthenticator newUser = new UserAuthenticator();
+    newUser.reset(this);
+
   }
 
   public void stopRecording(View view) {

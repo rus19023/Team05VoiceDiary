@@ -152,46 +152,44 @@ public class UserAuthenticator {
 
     public void loginUserAction(MainActivity context) {
 
-            /*get the information from the user*/
-       userMail = (EditText) context.findViewById((R.id.email));
+        /*get the information from the user*/
+        userMail = (EditText) context.findViewById((R.id.email));
         userPassword = (EditText) context.findViewById((R.id.password));
 
 
         eMail = userMail.getText().toString();
         password = userPassword.getText().toString();
         if (!eMail.isEmpty() && (!password.isEmpty())) {
-                login(eMail, password, context);
-        }
-        else{
+            login(eMail, password, context);
+        } else {
             Toast.makeText(context, "Must complete all fields.", Toast.LENGTH_SHORT).show();
         }
     }
-
 
 
     private void login(String eMail, String password, final MainActivity context) {
         userFirebase = FirebaseAuth.getInstance();
         userFirebase.signInWithEmailAndPassword(eMail, password).addOnCompleteListener
                 (new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Intent intent = new Intent(context, MainActivity.class);
-                            startActivity(context, intent, null);
-                            Toast.makeText(context, "SUCCSESS LOGIN", Toast.LENGTH_SHORT).show();
-                            context.finish();
-                        }
-                        else{
-                            Toast.makeText(context, "Couldn't start session, must review your input.", Toast.LENGTH_SHORT).show();
-                        }
-                    }
+                     @Override
+                     public void onComplete(@NonNull Task<AuthResult> task) {
+                         if (task.isSuccessful()) {
+                             Intent intent = new Intent(context, MainActivity.class);
+                             startActivity(context, intent, null);
+                             Toast.makeText(context, "SUCCSESS LOGIN", Toast.LENGTH_SHORT).show();
+                             context.finish();
+                         } else {
+                             Toast.makeText(context, "Couldn't start session, must review your input.", Toast.LENGTH_SHORT).show();
+                         }
+                     }
 
-                }
-        );
+                 }
+                );
     }
 
     /**
      * logOutUser method take an user and log out from the firebase authentication system
+     *
      * @param context
      */
 
@@ -210,5 +208,31 @@ public class UserAuthenticator {
 
 
     }
-}
 
+    public void reset(final MainActivity context) {
+        userMail = (EditText) context.findViewById((R.id.email));
+        eMail = userMail.getText().toString();
+        if (!eMail.isEmpty()) {
+            userFirebase = FirebaseAuth.getInstance();
+            userFirebase.setLanguageCode("en");
+            userFirebase.sendPasswordResetEmail(eMail).addOnCompleteListener(new OnCompleteListener<Void>() {
+
+                                                                                 @Override
+                                                                                 public void onComplete(@NonNull Task<Void> task) {
+                                                                                     if (task.isSuccessful()){
+                                                                                         Toast.makeText(context, "We send you an email to reestablish your password", Toast.LENGTH_SHORT).show();
+                                                                                     }
+                                                                                     else{
+                                                                                         Toast.makeText(context, "We couldn't reestablish with this email.", Toast.LENGTH_SHORT).show();
+                                                                                     }
+                                                                                 }
+                                                                             }
+
+            );
+        } else {
+            Toast.makeText(context, "Must enter an email", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+}

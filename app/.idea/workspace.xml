@@ -28,8 +28,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c34468a-3edc-4202-97b2-02929ac369d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/ResetPasswordFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_resetpassword.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/UserAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/UserAuthenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/layout/fragment_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/layout/fragment_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +76,7 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -110,6 +119,11 @@
     <option name="MODULE_TAB" value="Default Config" />
     <option name="BUILD_VARIANTS_TAB" value="Build Types" />
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.1398991734">
+      <recent name="com.voicediary" />
+    </key>
   </component>
   <component name="RunManager" selected="Android App.app">
     <configuration name="ExampleUnitTest.addition_isCorrect" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
@@ -282,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594807970393</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="restriction to the main menu applied if not register in, must evaluate if login button is necessary in that menu after this change.">
+      <created>1594808763087</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1594808763087</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,16 +330,18 @@
     <MESSAGE value="Last on Monday all authentication working must implement the restrictions" />
     <MESSAGE value="All authentication working , just one button dont fix yet in register to go to LoginFragment" />
     <MESSAGE value="All screens working correctly and linking to the right place, the app secure the right user in and out and if nesssesary register a new one." />
-    <option name="LAST_COMMIT_MESSAGE" value="All screens working correctly and linking to the right place, the app secure the right user in and out and if nesssesary register a new one." />
+    <MESSAGE value="restriction to the main menu applied if not register in, must evaluate if login button is necessary in that menu after this change." />
+    <option name="LAST_COMMIT_MESSAGE" value="restriction to the main menu applied if not register in, must evaluate if login button is necessary in that menu after this change." />
   </component>
   <component name="WindowStateProjectService">
     <state x="256" y="84" width="919" height="535" key="#PSD" timestamp="1594734963950">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
     <state x="256" y="84" width="919" height="535" key="#PSD/0.0.1280.690@0.0.1280.690" timestamp="1594734963950" />
-    <state x="447" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1593700401787">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="447" y="66" key="#com.intellij.ide.util.MemberChooser" timestamp="1594816782060">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
+    <state x="447" y="66" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1594816782060" />
     <state x="447" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1593700401787" />
     <state x="322" y="88" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1593439352977">
       <screen x="0" y="0" width="1280" height="720" />
@@ -332,14 +355,18 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="388" y="70" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.720@0.0.1280.720" timestamp="1593557235271" />
+    <state x="222" y="100" key="AndroidCreateResourceFileDialog" timestamp="1594810790244">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="222" y="100" key="AndroidCreateResourceFileDialog/0.0.1280.690@0.0.1280.690" timestamp="1594810790244" />
     <state x="720" y="140" key="AndroidCreateXmlResourceDialog" timestamp="1593634782955">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="720" y="140" key="AndroidCreateXmlResourceDialog/0.0.1280.720@0.0.1280.720" timestamp="1593634782955" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1594807968861">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1594819238575">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1594807968861" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1594819238575" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1593693671150" />
     <state x="94" y="94" width="1092" height="532" key="DiffContextDialog" timestamp="1593281531168">
       <screen x="0" y="0" width="1280" height="720" />
@@ -395,10 +422,10 @@
     </state>
     <state x="150" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1594733870437" />
     <state x="150" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1593436889912" />
-    <state x="234" y="89" key="Vcs.Push.Dialog.v2" timestamp="1594808026642">
+    <state x="234" y="89" key="Vcs.Push.Dialog.v2" timestamp="1594808775339">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="234" y="89" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1594808026642" />
+    <state x="234" y="89" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1594808775339" />
     <state x="234" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1593693678746" />
     <state width="646" height="366" key="XDebugger.FullValuePopup" timestamp="1593454244901">
       <screen x="0" y="0" width="1280" height="720" />
@@ -412,10 +439,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="94" y="94" width="1092" height="532" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1280.720@0.0.1280.720" timestamp="1593439568601" />
-    <state x="88" y="101" key="com.intellij.ide.util.TipDialog" timestamp="1594807141962">
+    <state x="88" y="101" key="com.intellij.ide.util.TipDialog" timestamp="1594812597132">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="88" y="101" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1594807141962" />
+    <state x="88" y="101" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1594812597132" />
     <state x="88" y="105" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1593986624903" />
     <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594807858384">
       <screen x="0" y="0" width="1280" height="690" />

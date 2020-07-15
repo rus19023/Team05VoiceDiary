@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:onClick="resetPassword"
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin"
     tools:context=".MainActivity">
@@ -97,5 +98,13 @@
                 android:text="@string/login"
                 android:textSize="@dimen/buttonTextSize" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/resetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="resetPassword"
+            android:text="RESET PASSWORD"
+            android:textSize="24sp" />
     </LinearLayout>
 </ScrollView>
