@@ -63,9 +63,12 @@ public class MainActivity extends AppCompatActivity
     //  separate fragments for register and login
 
     // we check here that the user is logged in , if not we run register
+
+
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     if (user != null) {
       // User is signed in
+      Toast.makeText(this, "User already signed.", Toast.LENGTH_SHORT).show();
     } else {
       // No user is signed in
       getSupportFragmentManager()
@@ -211,9 +214,20 @@ public class MainActivity extends AppCompatActivity
     Log.d(TAG, "in onSaveclick");
   }
 
-  public void onRevertClick(View view) {
-    Toast.makeText(this, "working connection to onRevertClick", Toast.LENGTH_SHORT).show();
-    Log.d(TAG, "In onRevertclick");
+
+  //This call to login is comming from the register screen ( fragment_register) in the beginning
+  public void loginCall(View view) {
+    Toast.makeText(this, "working connection to loginCall", Toast.LENGTH_SHORT).show();
+    Log.d(TAG, "In loginCall");
+    getSupportFragmentManager()
+            .beginTransaction()
+            .replace(R.id.main_view, new LoginFragment())
+
+            .commit();
+
+
+
+
   }
 
   /**
