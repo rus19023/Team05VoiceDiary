@@ -4,18 +4,17 @@ import android.media.MediaPlayer;
 import android.util.Log;
 import android.widget.Toast;
 
-
-  import com.google.cloud.speech.v1.RecognitionAudio;
-  import com.google.cloud.speech.v1.RecognitionConfig;
-  import com.google.cloud.speech.v1.RecognizeRequest;
-  import com.google.cloud.speech.v1.RecognizeResponse;
-  import com.google.cloud.speech.v1.SpeechClient;
-  import com.google.cloud.speech.v1.SpeechRecognitionAlternative;
-  import com.google.cloud.speech.v1.SpeechRecognitionResult;
-  import com.google.protobuf.ByteString;
-  import java.nio.file.Files;
-  import java.nio.file.Path;
-  import java.nio.file.Paths;
+import com.google.cloud.speech.v1.RecognitionAudio;
+import com.google.cloud.speech.v1.RecognitionConfig;
+import com.google.cloud.speech.v1.RecognizeRequest;
+import com.google.cloud.speech.v1.RecognizeResponse;
+import com.google.cloud.speech.v1.SpeechClient;
+import com.google.cloud.speech.v1.SpeechRecognitionAlternative;
+import com.google.cloud.speech.v1.SpeechRecognitionResult;
+import com.google.protobuf.ByteString;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 
 public class GetAsyncTranscript implements Runnable {

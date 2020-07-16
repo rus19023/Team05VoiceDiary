@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.time.Instant;
 import java.util.Objects;
 
-public class AudioRecorder extends AppCompatActivity {
+public class AudioActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = "AudioRecording";
     private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
@@ -104,9 +104,9 @@ public class AudioRecorder extends AppCompatActivity {
             public void onClick(View v) {
                 onRecord(mStartRecording);
                 if (mStartRecording) {
-                    setText("Stop recording");
+                    setText(R.string.stopRecord);
                 } else {
-                    setText("Start recording");
+                    setText(R.string.startRecord);
                 }
                 mStartRecording = !mStartRecording;
             }
@@ -114,7 +114,7 @@ public class AudioRecorder extends AppCompatActivity {
 
         public RecordButton(Context ctx) {
             super(ctx);
-            setText("Start recording");
+            setText(R.string.startRecord);
             setOnClickListener(clicker);
         }
     }
@@ -126,9 +126,9 @@ public class AudioRecorder extends AppCompatActivity {
             public void onClick(View v) {
                 onPlay(mStartPlaying);
                 if (mStartPlaying) {
-                    setText("Stop playing");
+                    setText(R.string.stopPlay);
                 } else {
-                    setText("Start playing");
+                    setText(R.string.startPlay);
                 }
                 mStartPlaying = !mStartPlaying;
             }
@@ -136,7 +136,7 @@ public class AudioRecorder extends AppCompatActivity {
 
         public PlayButton(Context ctx) {
             super(ctx);
-            setText("Start playing");
+            setText(R.string.startPlay);
             setOnClickListener(clicker);
         }
     }

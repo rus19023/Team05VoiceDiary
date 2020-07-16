@@ -7,7 +7,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.SharedPreferences;
-import android.media.AudioRecord;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -17,7 +16,6 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-import static com.voicediary.R.id.nav_login;
 import static com.voicediary.R.id.nav_view;
 
 public class MainActivity extends AppCompatActivity
@@ -100,7 +98,7 @@ public class MainActivity extends AppCompatActivity
         getSupportFragmentManager()
             .beginTransaction()
             //.replace(R.id.main_view, new RegisterLoginFragment())
-              .replace(R.id.main_view, new RecordingFragment())
+              .replace(R.id.main_view, new RecordingFragment(start, stop, play))
             .commit();
         break;
       case R.id.nav_print_menu:
@@ -145,13 +143,9 @@ public class MainActivity extends AppCompatActivity
     Log.d(TAG, "In pauseRecording");
   }
 
-  public void startRecording(View view) {
-
-    AudioRecorder myrecorder = new AudioRecorder();
-    //myrecorder.;
-
+  public void startToRecord(View view) {
     Toast.makeText(this, "working connection to startRecording ", Toast.LENGTH_SHORT).show();
-    Log.d(TAG, "In startRecording");
+    Log.d(TAG, "In startToRecord");
   }
 
   public void stopRecording(View view) {
