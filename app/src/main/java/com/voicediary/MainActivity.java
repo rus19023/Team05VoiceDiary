@@ -13,29 +13,12 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-<<<<<<< HEAD
-=======
-import android.widget.EditText;
->>>>>>> Authenticatio
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.auth.FirebaseUser;
 
-<<<<<<< HEAD
-=======
-
-import java.util.HashMap;
-import java.util.Map;
-
-import static com.voicediary.R.id.fade;
-import static com.voicediary.R.id.nav_login;
->>>>>>> Authenticatio
 import static com.voicediary.R.id.nav_view;
 
 public class MainActivity extends AppCompatActivity
@@ -44,9 +27,6 @@ public class MainActivity extends AppCompatActivity
   private static final String TAG = "MainActivity";
   String transcription;
   private DrawerLayout drawer;
-
-
-
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -70,13 +50,23 @@ public class MainActivity extends AppCompatActivity
     // *** need to figure out user registered/logged in logic and implement here ***
     //  separate fragments for register and login
 
+    // we check here that the user is logged in , if not we run register
 
 
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    if (user != null) {
+      // User is signed in
+      Toast.makeText(this, "User already signed.", Toast.LENGTH_SHORT).show();
+    } else {
+      // No user is signed in
+      getSupportFragmentManager()
+              .beginTransaction()
+              .replace(R.id.main_view, new RegisterLoginFragment())
+              .commit();
+      navigationView.setCheckedItem(R.id.nav_record);
 
 
-
-
-
+  }
 
 
     if (savedInstanceState == null) {
@@ -87,7 +77,6 @@ public class MainActivity extends AppCompatActivity
       navigationView.setCheckedItem(R.id.nav_record);
     }
   }
-
 
   /* ---------this is one of the ways we can implement the thread that respond to the call-------
    @Override
@@ -117,14 +106,6 @@ public class MainActivity extends AppCompatActivity
                   }
    */
 
-
-
-
-
-
-
-
-
   // show transcription received
   public String seeTranscription() {
     Toast.makeText(this, "working connection to seeTranscription ", Toast.LENGTH_SHORT).show();
@@ -140,10 +121,6 @@ public class MainActivity extends AppCompatActivity
         getSupportFragmentManager()
             .beginTransaction()
               .replace(R.id.main_view, new RecordingFragment() {
-                @Override
-                public void onClick(View view) {
-
-                }
               })
             .commit();
         break;
@@ -174,7 +151,7 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    Toast.makeText(this, "I am inmediatelly after item will connect to Login", Toast.LENGTH_SHORT).show();
+    Toast.makeText(this, "I am immediately after item will connect to Login", Toast.LENGTH_SHORT).show();
 
     drawer.closeDrawer(GravityCompat.START);
     return true;

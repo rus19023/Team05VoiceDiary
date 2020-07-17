@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_marginTop="@dimen/activity_vertical_margin_small"
-            android:text="@string/email_label"
+            android:text="@string/password_label"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
