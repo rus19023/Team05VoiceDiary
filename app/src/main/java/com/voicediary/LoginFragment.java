@@ -35,7 +35,7 @@ public class LoginFragment extends Fragment {
 
       }
       else {
-        Toast.makeText(this.getContext(), "Already loged in", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getContext(), "Already logged in", Toast.LENGTH_SHORT).show();
         return null;
       }
   }

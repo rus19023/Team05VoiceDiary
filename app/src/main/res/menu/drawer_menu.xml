@@ -23,11 +23,14 @@
             android:title="" />
     </group>
 
-
             <item
                 android:id="@+id/nav_login"
                 android:icon="@drawable/ic_login"
                 android:title="@string/login" />
+            <item
+            android:id="@+id/nav_reset_password"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="@string/reset_menu_item" />
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_logout"

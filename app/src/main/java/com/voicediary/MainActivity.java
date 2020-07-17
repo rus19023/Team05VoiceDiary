@@ -49,40 +49,27 @@ public class MainActivity extends AppCompatActivity
     drawer.addDrawerListener(toggle);
     toggle.syncState();
 
-    // *** need to figure out user registered/logged in logic and implement here ***
-    //  separate fragments for register and login
-
-    // we check here that the user is logged in , if not we run register
-    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    if (user != null) {
-      // User is signed in
-      Toast.makeText(this, "User already signed in.", Toast.LENGTH_SHORT).show();
-    } else {
-      // No user is signed in
-      getSupportFragmentManager()
-              .beginTransaction()
-              .replace(R.id.main_view, new RegisterLoginFragment())
-              .commit();
-      navigationView.setCheckedItem(R.id.nav_record);
-
-    }
+    navigationView.setCheckedItem(R.id.nav_record);
   }
 
   // show transcription received
   public String seeTranscription() {
-    Toast.makeText(this, "working conection to seeTranscription ", Toast.LENGTH_SHORT).show();
+    Toast.makeText(this, "working connection to seeTranscription ", Toast.LENGTH_SHORT).show();
     Log.d(TAG, "In  seeTranscription ");
     return transcription;
   }
 
   @Override
   public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+    // *** need to figure out user registered/logged in logic and implement here ***
+    //  separate fragments for register and login
+    // we check here that the user is logged in , if not we run register
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     if (user != null){
       /*user is signed in*/
       switch (item.getItemId()) {
 
-<<<<<<< HEAD
         case R.id.nav_record:
           getSupportFragmentManager()
               .beginTransaction()
@@ -103,31 +90,6 @@ public class MainActivity extends AppCompatActivity
         case R.id.nav_login:
           Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
           getSupportFragmentManager()
-=======
-    switch (item.getItemId()) {
-
-      case R.id.nav_record:
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.main_view, new EntriesFragment())
-                .commit();
-        break;
-      case R.id.nav_print_menu:
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.main_view, new PrintMenuFragment())
-                .commit();
-        break;
-      case R.id.nav_entries:
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.main_view, new EntriesFragment())
-                .commit();
-        break;
-      case R.id.nav_login:
-        Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
-        getSupportFragmentManager()
->>>>>>> master
                 .beginTransaction()
                 .replace(R.id.main_view, new LoginFragment())
                 .commit();
@@ -137,13 +99,22 @@ public class MainActivity extends AppCompatActivity
           UserAuthenticator newUser = new UserAuthenticator();
           newUser.logOutUser(this);
           break;
+        case R.id.nav_reset_password:
+          getSupportFragmentManager()
+                  .beginTransaction()
+                  .replace(R.id.main_view, new ResetPasswordFragment())
+                  .commit();
       }
     }
     else{
-      Toast.makeText(this, "You must sign in to use the app, please sign inn. ", Toast.LENGTH_SHORT).show();
+      Toast.makeText(this, "You must sign in to use the app, please sign in.", Toast.LENGTH_SHORT).show();
+
+      // No user is signed in
+      getSupportFragmentManager()
+              .beginTransaction()
+              .replace(R.id.main_view, new RegisterLoginFragment())
+              .commit();
     }
-
-
 
     Toast.makeText(this, "I am immediately after item will connect to Login", Toast.LENGTH_SHORT).show();
 
@@ -169,7 +140,6 @@ public class MainActivity extends AppCompatActivity
     UserAuthenticator newUser = new UserAuthenticator();
     newUser.createUser(this);
 
-
     Log.d(TAG, "In authenticateUser");
   }
 
@@ -184,20 +154,12 @@ public class MainActivity extends AppCompatActivity
    */
   public void resetPassword(View view) {
     Toast.makeText(this, "working connection to resetPassword ", Toast.LENGTH_SHORT).show();
-    Log.d(TAG, "In startRecording");
-
-    Toast.makeText(this, "working connection to reset password", Toast.LENGTH_SHORT).show();
     Log.d(TAG, "In resetpassword");
     getSupportFragmentManager()
             .beginTransaction()
             .replace(R.id.main_view, new ResetPasswordFragment())
-
             .commit();
-
-
   }
-
-
 
   /**
    * This method is call by the button in the reset password layout and send an email to reset password.
@@ -206,8 +168,6 @@ public class MainActivity extends AppCompatActivity
   public void resetUser( View view){
     UserAuthenticator newUser = new UserAuthenticator();
     newUser.reset(this);
-
-
   }
 
   public void stopRecording(View view) {

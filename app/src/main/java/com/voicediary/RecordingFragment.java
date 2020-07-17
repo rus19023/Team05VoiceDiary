@@ -12,8 +12,6 @@ import androidx.fragment.app.Fragment;
 public class RecordingFragment extends Fragment {
 
     private static final String TAG = "RecordingFragment";
-    private MediaRecorder myAudioRecorder;
-    private String output = null;
 
     @Nullable
     @Override

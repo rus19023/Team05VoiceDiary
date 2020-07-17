@@ -59,4 +59,7 @@
     <string name="register_user">Register User</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="reset_menu_item">Reset Password</string>
+    <string name="requesttranscription">RequestTranscription</string>
 </resources>
