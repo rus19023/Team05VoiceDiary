@@ -64,21 +64,13 @@ public class MainActivity extends AppCompatActivity
               .replace(R.id.main_view, new RegisterLoginFragment())
               .commit();
       navigationView.setCheckedItem(R.id.nav_record);
-  }
 
-    if (savedInstanceState == null) {
-
-      getSupportFragmentManager()
-              .beginTransaction()
-              .replace(R.id.main_view, new RegisterLoginFragment())
-              .commit();
-      navigationView.setCheckedItem(R.id.nav_record);
     }
   }
 
   // show transcription received
   public String seeTranscription() {
-    Toast.makeText(this, "working connection to seeTranscription ", Toast.LENGTH_SHORT).show();
+    Toast.makeText(this, "working conection to seeTranscription ", Toast.LENGTH_SHORT).show();
     Log.d(TAG, "In  seeTranscription ");
     return transcription;
   }
@@ -90,6 +82,7 @@ public class MainActivity extends AppCompatActivity
       /*user is signed in*/
       switch (item.getItemId()) {
 
+<<<<<<< HEAD
         case R.id.nav_record:
           getSupportFragmentManager()
               .beginTransaction()
@@ -110,6 +103,31 @@ public class MainActivity extends AppCompatActivity
         case R.id.nav_login:
           Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
           getSupportFragmentManager()
+=======
+    switch (item.getItemId()) {
+
+      case R.id.nav_record:
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_view, new EntriesFragment())
+                .commit();
+        break;
+      case R.id.nav_print_menu:
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_view, new PrintMenuFragment())
+                .commit();
+        break;
+      case R.id.nav_entries:
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_view, new EntriesFragment())
+                .commit();
+        break;
+      case R.id.nav_login:
+        Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
+        getSupportFragmentManager()
+>>>>>>> master
                 .beginTransaction()
                 .replace(R.id.main_view, new LoginFragment())
                 .commit();
@@ -218,7 +236,6 @@ public class MainActivity extends AppCompatActivity
   }
 
   public void retrieveEntry(View view) {
-
     Toast.makeText(this, "working connection to retrieveEntry ", Toast.LENGTH_SHORT).show();
     Log.d(TAG, "In  retrieveEntry");
   }
