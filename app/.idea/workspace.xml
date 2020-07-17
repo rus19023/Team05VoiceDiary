@@ -3,75 +3,40 @@
   <component name="AnalysisUIOptions">
     <option name="AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="debug" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagIsRegex" value="false" />
+        <option name="logTagPattern" value="d" />
+        <option name="name" value="Unnamed-0" />
+        <option name="packageNamePattern" value="" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidLayouts">
     <shared>
       <config />
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Firebase" />
+    <option name="LOGCAT_FORMAT_STRING" value="%1$s %4$c/%5$s: %6$s" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c34468a-3edc-4202-97b2-02929ac369d7" name="Default Changelist" comment="third commit on wednesday">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_2_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_2_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_2_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_transition_transition_1_2_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager2_viewpager2_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_17_4_3_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_17_4_3_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_17_4_3_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_17_4_3_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_17_4_3_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_functions_19_0_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_20_1_5_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_16_2_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_installations_interop_16_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_12_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_15_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../licenses/android-sdk-arm-dbt-license" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_percentlayout_percentlayout_1_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_19_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_19_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_base_19_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_base_19_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_lite_19_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_ads_lite_19_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_gass_19_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_gass_19_2_0_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_api_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_base_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_impl_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_17_2_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_17_2_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_measurement_sdk_api_17_4_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_support_wearable_2_7_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_17_2_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_17_4_3_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_19_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_19_3_1_aar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_20_0_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/google-services.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/RegisterLoginFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/RegisterLoginFragment.java" afterDir="false" />
+    <list default="true" id="8c34468a-3edc-4202-97b2-02929ac369d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_Edited_API_R" />
   <component name="ExternalProjectsData">
@@ -82,6 +47,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/..">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -99,6 +67,7 @@
       <list>
         <option value="Class" />
         <option value="Interface" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -125,14 +94,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
+    <option name="BUILD_VARIANTS_TAB" value="Build Types" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.1398991734">
+      <recent name="com.voicediary" />
+    </key>
   </component>
   <component name="RunManager" selected="Android App.app">
     <configuration name="ExampleUnitTest.addition_isCorrect" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
@@ -213,6 +195,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Android JUnit.ExampleUnitTest.addition_isCorrect" />
+        <item itemvalue="Android JUnit.ExampleUnitTest.addition_isCorrect" />
+        <item itemvalue="Android JUnit.ExampleUnitTest.addition_isCorrect" />
       </list>
     </recent_temporary>
   </component>
@@ -248,7 +232,84 @@
       <option name="project" value="LOCAL" />
       <updated>1593029677685</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Monday Carlos All conections working, must check firebase connections">
+      <created>1593461038498</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593461038498</updated>
+    </task>
+    <task id="LOCAL-00005" summary="starting work with authentication in firebase">
+      <created>1593693360339</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593693360339</updated>
+    </task>
+    <task id="LOCAL-00006" summary="first commit on saturday 11">
+      <created>1594491922898</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594491922899</updated>
+    </task>
+    <task id="LOCAL-00007" summary="First commit monday, changes in menu working in all directions well, creating new user.">
+      <created>1594593300469</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594593300469</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Second commit monday, erased unused classes. logout functional.">
+      <created>1594645014971</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1594645014971</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Last on Monday all authentication working must implement the restrictions">
+      <created>1594669669412</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1594669669413</updated>
+    </task>
+    <task id="LOCAL-00010" summary="All authentication working , just one button dont fix yet in register to go to LoginFragment">
+      <created>1594763646180</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1594763646181</updated>
+    </task>
+    <task id="LOCAL-00011" summary="All screens working correctly and linking to the right place, the app secure the right user in and out and if nesssesary register a new one.">
+      <created>1594807970392</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1594807970393</updated>
+    </task>
+    <task id="LOCAL-00012" summary="restriction to the main menu applied if not register in, must evaluate if login button is necessary in that menu after this change.">
+      <created>1594808763087</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1594808763087</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Reset password working, still need improvements in the navigation between layouts">
+      <created>1594819292772</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1594819292772</updated>
+    </task>
+    <task id="LOCAL-00014" summary="first friday">
+      <created>1594999929415</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1594999929415</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,66 +328,122 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit with main and async plus interface" />
     <MESSAGE value="third commit on wednesday" />
-    <option name="LAST_COMMIT_MESSAGE" value="third commit on wednesday" />
+    <MESSAGE value="Monday Carlos All conections working, must check firebase connections" />
+    <MESSAGE value="starting work with authentication in firebase" />
+    <MESSAGE value="first commit on saturday 11" />
+    <MESSAGE value="First commit monday, changes in menu working in all directions well, creating new user." />
+    <MESSAGE value="Second commit monday, erased unused classes. logout functional." />
+    <MESSAGE value="Last on Monday all authentication working must implement the restrictions" />
+    <MESSAGE value="All authentication working , just one button dont fix yet in register to go to LoginFragment" />
+    <MESSAGE value="All screens working correctly and linking to the right place, the app secure the right user in and out and if nesssesary register a new one." />
+    <MESSAGE value="restriction to the main menu applied if not register in, must evaluate if login button is necessary in that menu after this change." />
+    <MESSAGE value="Reset password working, still need improvements in the navigation between layouts" />
+    <MESSAGE value="first friday" />
+    <option name="LAST_COMMIT_MESSAGE" value="first friday" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="256" y="84" width="919" height="535" key="#PSD" timestamp="1594734963950">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="256" y="84" width="919" height="535" key="#PSD/0.0.1280.690@0.0.1280.690" timestamp="1594734963950" />
+    <state x="447" y="66" key="#com.intellij.ide.util.MemberChooser" timestamp="1594816782060">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="447" y="66" key="#com.intellij.ide.util.MemberChooser/0.0.1280.690@0.0.1280.690" timestamp="1594816782060" />
+    <state x="447" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1593700401787" />
     <state x="322" y="88" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1593439352977">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="322" y="88" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.720@0.0.1280.720" timestamp="1593439352977" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595003964534">
+    <state x="372" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594644770731">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1595003964534" />
-    <state x="242" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1593281255087" />
-    <state x="94" y="94" width="1092" height="532" key="DiffContextDialog" timestamp="1593281531168">
+    <state x="372" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.690@0.0.1280.690" timestamp="1594644770731" />
+    <state x="388" y="70" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1593557235271">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
+    <state x="388" y="70" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.720@0.0.1280.720" timestamp="1593557235271" />
+    <state x="222" y="100" key="AndroidCreateResourceFileDialog" timestamp="1594810790244">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="222" y="100" key="AndroidCreateResourceFileDialog/0.0.1280.690@0.0.1280.690" timestamp="1594810790244" />
+    <state x="720" y="140" key="AndroidCreateXmlResourceDialog" timestamp="1593634782955">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="720" y="140" key="AndroidCreateXmlResourceDialog/0.0.1280.720@0.0.1280.720" timestamp="1593634782955" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1594999928330">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1594999928330" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1593693671150" />
+    <state x="94" y="90" width="1092" height="532" key="DiffContextDialog" timestamp="1595000389900">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="94" y="90" key="DiffContextDialog/0.0.1280.690@0.0.1280.690" timestamp="1595000389900" />
     <state x="94" y="94" width="1092" height="532" key="DiffContextDialog/0.0.1280.720@0.0.1280.720" timestamp="1593281531168" />
-    <state x="422" y="115" key="FileChooserDialogImpl" timestamp="1593458999834">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="422" y="110" key="FileChooserDialogImpl" timestamp="1594732074017">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="422" y="115" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1593458999834" />
-    <state width="1237" height="371" key="GridCell.Tab.0.bottom" timestamp="1593460965043">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="422" y="110" key="FileChooserDialogImpl/0.0.1280.690@0.0.1280.690" timestamp="1594732074017" />
+    <state x="422" y="115" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1593986706844" />
+    <state width="789" height="296" key="GridCell.Tab.0.bottom" timestamp="1594662204430">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="371" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1593460965043" />
-    <state width="1237" height="371" key="GridCell.Tab.0.center" timestamp="1593460965043">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="789" height="296" key="GridCell.Tab.0.bottom/0.0.1280.690@0.0.1280.690" timestamp="1594662204430" />
+    <state width="1237" height="252" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1594056391727" />
+    <state width="789" height="296" key="GridCell.Tab.0.center" timestamp="1594662204430">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="371" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1593460965043" />
-    <state width="1237" height="371" key="GridCell.Tab.0.left" timestamp="1593460965043">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="789" height="296" key="GridCell.Tab.0.center/0.0.1280.690@0.0.1280.690" timestamp="1594662204430" />
+    <state width="1237" height="252" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1594056391727" />
+    <state width="789" height="296" key="GridCell.Tab.0.left" timestamp="1594662204429">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="371" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1593460965043" />
-    <state width="1237" height="371" key="GridCell.Tab.0.right" timestamp="1593460965043">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="789" height="296" key="GridCell.Tab.0.left/0.0.1280.690@0.0.1280.690" timestamp="1594662204429" />
+    <state width="1237" height="252" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1594056391726" />
+    <state width="789" height="296" key="GridCell.Tab.0.right" timestamp="1594662204430">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="371" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1593460965043" />
-    <state width="1237" height="376" key="GridCell.Tab.1.bottom" timestamp="1593459405828">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="789" height="296" key="GridCell.Tab.0.right/0.0.1280.690@0.0.1280.690" timestamp="1594662204430" />
+    <state width="1237" height="252" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1594056391727" />
+    <state width="1237" height="219" key="GridCell.Tab.1.bottom" timestamp="1594657712270">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="376" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1593459405828" />
-    <state width="1237" height="376" key="GridCell.Tab.1.center" timestamp="1593459405828">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="1237" height="219" key="GridCell.Tab.1.bottom/0.0.1280.690@0.0.1280.690" timestamp="1594657712270" />
+    <state width="675" height="168" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1593821557309" />
+    <state width="1237" height="219" key="GridCell.Tab.1.center" timestamp="1594657712270">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="376" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1593459405828" />
-    <state width="1237" height="376" key="GridCell.Tab.1.left" timestamp="1593459405828">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="1237" height="219" key="GridCell.Tab.1.center/0.0.1280.690@0.0.1280.690" timestamp="1594657712270" />
+    <state width="675" height="168" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1593821557309" />
+    <state width="1237" height="219" key="GridCell.Tab.1.left" timestamp="1594657712269">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="376" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1593459405828" />
-    <state width="1237" height="376" key="GridCell.Tab.1.right" timestamp="1593459405828">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="1237" height="219" key="GridCell.Tab.1.left/0.0.1280.690@0.0.1280.690" timestamp="1594657712269" />
+    <state width="675" height="168" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1593821557308" />
+    <state width="1237" height="219" key="GridCell.Tab.1.right" timestamp="1594657712270">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state width="1237" height="376" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1593459405828" />
-    <state x="150" y="3" key="SettingsEditor" timestamp="1593436889912">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state width="1237" height="219" key="GridCell.Tab.1.right/0.0.1280.690@0.0.1280.690" timestamp="1594657712270" />
+    <state width="675" height="168" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1593821557309" />
+    <state x="122" y="52" key="MergeDialog" timestamp="1595000505661">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
+    <state x="122" y="52" key="MergeDialog/0.0.1280.690@0.0.1280.690" timestamp="1595000505661" />
+    <state x="354" y="61" key="MultipleFileMergeDialog" timestamp="1595000508391">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="354" y="61" key="MultipleFileMergeDialog/0.0.1280.690@0.0.1280.690" timestamp="1595000508391" />
+    <state x="150" y="0" key="SettingsEditor" timestamp="1594733870437">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="150" y="0" key="SettingsEditor/0.0.1280.690@0.0.1280.690" timestamp="1594733870437" />
     <state x="150" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1593436889912" />
-    <state x="234" y="93" key="Vcs.Push.Dialog.v2" timestamp="1593030112190">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="234" y="89" key="Vcs.Push.Dialog.v2" timestamp="1594999942717">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="234" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1593030112190" />
+    <state x="234" y="89" key="Vcs.Push.Dialog.v2/0.0.1280.690@0.0.1280.690" timestamp="1594999942717" />
+    <state x="234" y="93" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1593693678746" />
     <state width="646" height="366" key="XDebugger.FullValuePopup" timestamp="1593454244901">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -339,22 +456,40 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="94" y="94" width="1092" height="532" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1280.720@0.0.1280.720" timestamp="1593439568601" />
-    <state x="88" y="105" key="com.intellij.ide.util.TipDialog" timestamp="1593458392094">
-      <screen x="0" y="0" width="1280" height="720" />
-    </state>
-    <state x="88" y="105" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1593458392094" />
-    <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595003902287">
+    <state x="88" y="101" key="com.intellij.ide.util.TipDialog" timestamp="1594812597132">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1595003902287" />
+    <state x="88" y="101" key="com.intellij.ide.util.TipDialog/0.0.1280.690@0.0.1280.690" timestamp="1594812597132" />
+    <state x="88" y="105" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1593986624903" />
+    <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594807858384">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1594807858384" />
     <state x="432" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1593460976518" />
-    <state x="427" y="136" key="git4idea.merge.GitMergeDialog" timestamp="1595003926951">
+    <state x="411" y="189" key="edit.logcat.filter.dialog.dimensions" timestamp="1594658760516">
       <screen x="0" y="0" width="1280" height="690" />
     </state>
-    <state x="427" y="136" key="git4idea.merge.GitMergeDialog/0.0.1280.690@0.0.1280.690" timestamp="1595003926951" />
-    <state x="344" y="151" key="git4idea.merge.GitPullDialog" timestamp="1593281424414">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="411" y="189" key="edit.logcat.filter.dialog.dimensions/0.0.1280.690@0.0.1280.690" timestamp="1594658760516" />
+    <state x="420" y="58" key="git4idea.branch.GitSmartOperationDialog" timestamp="1595000494022">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
+    <state x="420" y="58" key="git4idea.branch.GitSmartOperationDialog/0.0.1280.690@0.0.1280.690" timestamp="1595000494022" />
+    <state x="427" y="136" key="git4idea.merge.GitMergeDialog" timestamp="1595000168201">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="427" y="136" key="git4idea.merge.GitMergeDialog/0.0.1280.690@0.0.1280.690" timestamp="1595000168201" />
+    <state x="344" y="145" key="git4idea.merge.GitPullDialog" timestamp="1594669607072">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="344" y="145" key="git4idea.merge.GitPullDialog/0.0.1280.690@0.0.1280.690" timestamp="1594669607072" />
     <state x="344" y="151" key="git4idea.merge.GitPullDialog/0.0.1280.720@0.0.1280.720" timestamp="1593281424414" />
+    <state x="538" y="71" key="psd.add.library.dependency.panel.dimension" timestamp="1594734935188">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="538" y="71" key="psd.add.library.dependency.panel.dimension/0.0.1280.690@0.0.1280.690" timestamp="1594734935188" />
+    <state x="298" y="154" width="672" height="677" key="run.anything.popup" timestamp="1594732088284">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="298" y="154" width="672" height="677" key="run.anything.popup/0.0.1280.690@0.0.1280.690" timestamp="1594732088284" />
   </component>
 </project>

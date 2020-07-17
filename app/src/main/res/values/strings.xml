@@ -48,5 +48,7 @@
     <string name="login_fragment">Login Fragment</string>
     <string name="save_recording">Save Recording</string>
     <string name="entry_management">Entry Management</string>
-    <string name="btnCapture">btnCapture</string>
+    <string name="register_user">Register User</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
