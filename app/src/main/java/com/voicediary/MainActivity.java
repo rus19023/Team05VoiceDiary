@@ -1,20 +1,19 @@
 package com.voicediary;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -32,11 +31,14 @@ public class MainActivity extends AppCompatActivity
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
     Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
+
     drawer = findViewById(R.id.drawer_layout);
     NavigationView navigationView = findViewById(nav_view);
     navigationView.setNavigationItemSelectedListener(this);
+
     ActionBarDrawerToggle toggle =
             new ActionBarDrawerToggle(
                     this,
@@ -51,12 +53,10 @@ public class MainActivity extends AppCompatActivity
     //  separate fragments for register and login
 
     // we check here that the user is logged in , if not we run register
-
-
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     if (user != null) {
       // User is signed in
-      Toast.makeText(this, "User already signed.", Toast.LENGTH_SHORT).show();
+      Toast.makeText(this, "User already signed in.", Toast.LENGTH_SHORT).show();
     } else {
       // No user is signed in
       getSupportFragmentManager()
@@ -64,12 +64,10 @@ public class MainActivity extends AppCompatActivity
               .replace(R.id.main_view, new RegisterLoginFragment())
               .commit();
       navigationView.setCheckedItem(R.id.nav_record);
-
-
   }
 
-
     if (savedInstanceState == null) {
+
       getSupportFragmentManager()
               .beginTransaction()
               .replace(R.id.main_view, new RegisterLoginFragment())
@@ -77,34 +75,6 @@ public class MainActivity extends AppCompatActivity
       navigationView.setCheckedItem(R.id.nav_record);
     }
   }
-
-  /* ---------this is one of the ways we can implement the thread that respond to the call-------
-   @Override
-  public void run() {
-      // This is the function that will be run on the background thread.
-
-      VoiceTranscriptionLoader loader = new VoiceTranscriptionLoader();
-
-      // Now, call the function that will get the results from the API and then when it is done,
-      // it will call the "handleResult" function on this new WeatherConditionsResultHandler
-      // object that we are giving it.
-      loader.getTranscription(voiceRecord, new VoiceTranscription() {
-          @Override
-          public void handleResult(VoiceTranscription voiceText) {
-
-              // At this point we will be back from the API with the results stored in `voiceText`
-
-              // Next, we need to run the function that will update the UI elements, but this
-              // must be run on the UI thread
-
-              activity.runOnUiThread(new Runnable() {
-                  @Override
-                  public void run() {
-                      // This is code that will now run on the UI thread. Call the function in
-                      // MainActivity that will update the UI correctly.
-                      activity.receiveText(voiceText);
-                  }
-   */
 
   // show transcription received
   public String seeTranscription() {
@@ -115,40 +85,46 @@ public class MainActivity extends AppCompatActivity
 
   @Override
   public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-    switch (item.getItemId()) {
-      case R.id.nav_record:
-        Button start = null;
-        getSupportFragmentManager()
-            .beginTransaction()
-              .replace(R.id.main_view, new RecordingFragment() {
-              })
-            .commit();
-        break;
-      case R.id.nav_print_menu:
-        getSupportFragmentManager()
-            .beginTransaction()
-            .replace(R.id.main_view, new PrintMenuFragment())
-            .commit();
-        break;
-      case R.id.nav_entries:
-        getSupportFragmentManager()
-            .beginTransaction()
-            .replace(R.id.main_view, new EntriesFragment())
-            .commit();
-        break;
-      case R.id.nav_login:
-        Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
-        getSupportFragmentManager()
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    if (user != null){
+      /*user is signed in*/
+      switch (item.getItemId()) {
+
+        case R.id.nav_record:
+          getSupportFragmentManager()
+              .beginTransaction()
+               .replace(R.id.main_view, new RecordingFragment())
+              .commit();
+        case R.id.nav_print_menu:
+          getSupportFragmentManager()
+              .beginTransaction()
+              .replace(R.id.main_view, new PrintMenuFragment())
+              .commit();
+          break;
+        case R.id.nav_entries:
+          getSupportFragmentManager()
+                  .beginTransaction()
+                  .replace(R.id.main_view, new EntriesFragment())
+                  .commit();
+              break;
+        case R.id.nav_login:
+          Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
+          getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.main_view, new RegisterLoginFragment())
-
+                .replace(R.id.main_view, new LoginFragment())
                 .commit();
-
-        break;
-      case R.id.nav_logout:
-        Toast.makeText(this, "This menu item will connect to Logout", Toast.LENGTH_SHORT).show();
-        break;
+            break;
+        case R.id.nav_logout:
+          Toast.makeText(this, "This menu item will connect to Logout", Toast.LENGTH_SHORT).show();
+          UserAuthenticator newUser = new UserAuthenticator();
+          newUser.logOutUser(this);
+          break;
+      }
     }
+    else{
+      Toast.makeText(this, "You must sign in to use the app, please sign inn. ", Toast.LENGTH_SHORT).show();
+    }
+
 
 
     Toast.makeText(this, "I am immediately after item will connect to Login", Toast.LENGTH_SHORT).show();
@@ -166,6 +142,10 @@ public class MainActivity extends AppCompatActivity
     }
   }
 
+  /**
+   * Register a new user in the system
+   * @param view
+   */
   public void authenticateUser(View view) {
     Toast.makeText(this, "working connection to authenticateUser  ", Toast.LENGTH_SHORT).show();
     UserAuthenticator newUser = new UserAuthenticator();
@@ -180,9 +160,36 @@ public class MainActivity extends AppCompatActivity
     Log.d(TAG, "In pauseRecording");
   }
 
-  public void startToRecord(View view) {
-    Toast.makeText(this, "working connection to startRecording ", Toast.LENGTH_SHORT).show();
-    Log.d(TAG, "In startToRecord");
+  /**
+   * This method call the layout to reestablish a new password.
+   * @param view
+   */
+  public void resetPassword(View view) {
+    Toast.makeText(this, "working connection to resetPassword ", Toast.LENGTH_SHORT).show();
+    Log.d(TAG, "In startRecording");
+
+    Toast.makeText(this, "working connection to reset password", Toast.LENGTH_SHORT).show();
+    Log.d(TAG, "In resetpassword");
+    getSupportFragmentManager()
+            .beginTransaction()
+            .replace(R.id.main_view, new ResetPasswordFragment())
+
+            .commit();
+
+
+  }
+
+
+
+  /**
+   * This method is call by the button in the reset password layout and send an email to reset password.
+   * @param view
+   */
+  public void resetUser( View view){
+    UserAuthenticator newUser = new UserAuthenticator();
+    newUser.reset(this);
+
+
   }
 
   public void stopRecording(View view) {
@@ -231,13 +238,26 @@ public class MainActivity extends AppCompatActivity
     Log.d(TAG, "in onSaveclick");
   }
 
-  public void onRevertClick(View view) {
-    Toast.makeText(this, "working connection to onRevertClick", Toast.LENGTH_SHORT).show();
-    Log.d(TAG, "In onRevertclick");
+  //This call to login is coming from the register screen ( fragment_register) in the beginning
+  public void loginCall(View view) {
+    Toast.makeText(this, "working connection to loginCall", Toast.LENGTH_SHORT).show();
+    Log.d(TAG, "In loginCall");
+    getSupportFragmentManager()
+            .beginTransaction()
+            .replace(R.id.main_view, new LoginFragment())
+            .commit();
   }
 
+  /**
+   * Login the user in the app
+   * create an UserAuthenticator object and use the method to login him from the class UserAuthenticator
+   * @param view
+   */
   public void loginUser(View view) {
-    Toast.makeText(this, "working connection to loginUser", Toast.LENGTH_SHORT).show();
+    Toast.makeText(this, "working connection to login User", Toast.LENGTH_SHORT).show();
+
+    UserAuthenticator newUser = new UserAuthenticator();
+    newUser.loginUserAction(this);
     Log.d(TAG, "In loginUser  ");
   }
 

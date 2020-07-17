@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public abstract class RecordingFragment extends Fragment {
+public class RecordingFragment extends Fragment {
 
     private static final String TAG = "RecordingFragment";
     private MediaRecorder myAudioRecorder;
