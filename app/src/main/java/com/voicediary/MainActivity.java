@@ -12,6 +12,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -95,10 +96,15 @@ public class MainActivity extends AppCompatActivity
   public boolean onNavigationItemSelected(@NonNull MenuItem item) {
     switch (item.getItemId()) {
       case R.id.nav_record:
+        Button start = null;
         getSupportFragmentManager()
             .beginTransaction()
-            //.replace(R.id.main_view, new RegisterLoginFragment())
-              .replace(R.id.main_view, new RecordingFragment(start, stop, play))
+              .replace(R.id.main_view, new RecordingFragment() {
+                @Override
+                public void onClick(View view) {
+
+                }
+              })
             .commit();
         break;
       case R.id.nav_print_menu:
@@ -164,7 +170,7 @@ public class MainActivity extends AppCompatActivity
   }
 
   public void saveNewEntry(View view) {
-    Toast.makeText(this, "working connection to  saveNewEntry", Toast.LENGTH_SHORT).show();
+    Toast.makeText(this, "working connection to saveNewEntry", Toast.LENGTH_SHORT).show();
     Log.d(TAG, "In saveNewEntry");
   }
 

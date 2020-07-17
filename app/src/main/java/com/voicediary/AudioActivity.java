@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,21 +12,21 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import java.io.IOException;
-import java.time.Instant;
-import java.util.Objects;
 
 public class AudioActivity extends AppCompatActivity {
 
-    private static final String LOG_TAG = "AudioRecording";
+    private static final String LOG_TAG = "AudioRecordTest";
     private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
     private static String fileName = null;
 
+    private RecordButton recordButton = null;
     private MediaRecorder recorder = null;
+
+    private PlayButton   playButton = null;
     private MediaPlayer   player = null;
 
     // Requesting permission to RECORD_AUDIO
@@ -37,10 +36,13 @@ public class AudioActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_RECORD_AUDIO_PERMISSION) {
-            permissionToRecordAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+        switch (requestCode){
+            case REQUEST_RECORD_AUDIO_PERMISSION:
+                permissionToRecordAccepted  = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+                break;
         }
         if (!permissionToRecordAccepted ) finish();
+
     }
 
     private void onRecord(boolean start) {
@@ -104,9 +106,9 @@ public class AudioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 onRecord(mStartRecording);
                 if (mStartRecording) {
-                    setText(R.string.stopRecord);
+                    setText("Stop recording");
                 } else {
-                    setText(R.string.startRecord);
+                    setText("Start recording");
                 }
                 mStartRecording = !mStartRecording;
             }
@@ -114,7 +116,7 @@ public class AudioActivity extends AppCompatActivity {
 
         public RecordButton(Context ctx) {
             super(ctx);
-            setText(R.string.startRecord);
+            setText("Start recording");
             setOnClickListener(clicker);
         }
     }
@@ -126,9 +128,9 @@ public class AudioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 onPlay(mStartPlaying);
                 if (mStartPlaying) {
-                    setText(R.string.stopPlay);
+                    setText("Stop playing");
                 } else {
-                    setText(R.string.startPlay);
+                    setText("Start playing");
                 }
                 mStartPlaying = !mStartPlaying;
             }
@@ -136,33 +138,29 @@ public class AudioActivity extends AppCompatActivity {
 
         public PlayButton(Context ctx) {
             super(ctx);
-            setText(R.string.startPlay);
+            setText("Start playing");
             setOnClickListener(clicker);
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        setContentView(R.layout.fragment_recording);
 
         // Record to the external cache directory for visibility
-        fileName = Objects.requireNonNull(getExternalCacheDir()).getAbsolutePath();
-        Instant dt = Instant.now();
-        fileName += dt.toString();
-        fileName += "/recording.3gp";
+        fileName = getExternalCacheDir().getAbsolutePath();
+        fileName += "/audiorecordtest.3gp";
 
         ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);
 
         LinearLayout ll = new LinearLayout(this);
-        RecordButton recordButton = new RecordButton(this);
+        recordButton = new RecordButton(this);
         ll.addView(recordButton,
                 new LinearLayout.LayoutParams(
                         ViewGroup.LayoutParams.WRAP_CONTENT,
                         ViewGroup.LayoutParams.WRAP_CONTENT,
                         0));
-        PlayButton playButton = new PlayButton(this);
+        playButton = new PlayButton(this);
         ll.addView(playButton,
                 new LinearLayout.LayoutParams(
                         ViewGroup.LayoutParams.WRAP_CONTENT,
