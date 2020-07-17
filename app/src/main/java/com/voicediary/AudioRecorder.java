@@ -1,65 +1,5 @@
 package com.voicediary;
-<<<<<<< HEAD
 
-
-import android.media.MediaPlayer;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MediaActivity extends AppCompatActivity {
-    MediaPlayer player;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_recording);
-    }
-
-    public void play(View view) {
-        if (player == null) {
-            //player = MediaPlayer.create(this, R.raw.song);
-            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    stopPlayer();
-                }
-            });
-        }
-        player.start();
-    }
-
-    public void pause(View view) {
-        if (player != null) {
-            player.pause();
-        }
-    }
-
-    public void record(View v) {}
-
-    public void stop(View v) {
-        stopPlayer();
-
-    }
-
-    private void stopPlayer() {
-        if (player != null) {
-            player.release();
-            player = null;
-            Toast.makeText(this, "working connection to startRecording ", Toast.LENGTH_SHORT).show();
-
-        }
-    }
-    /*
-    @Override
-    protected void OnStop() {
-        super.OnStop();
-        stopPlayer();
-    }
-    */
-=======
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -77,17 +17,17 @@ import androidx.core.app.ActivityCompat;
 
 import java.io.IOException;
 
-public class MediaActivity extends AppCompatActivity {
+public class AudioRecorder extends AppCompatActivity {
 
     private static final String LOG_TAG = "AudioRecordTest";
     private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
     private static String fileName = null;
 
-    private com.voicediary.AudioRecorder.RecordButton recordButton = null;
-    private MediaRecorder recorder = null;
+    private RecordButton recordButton = null;
+    private static MediaRecorder recorder = null;
 
-    private com.voicediary.AudioRecorder.PlayButton playButton = null;
-    private MediaPlayer   player = null;
+    private PlayButton   playButton = null;
+    private static MediaPlayer   player = null;
 
     // Requesting permission to RECORD_AUDIO
     private boolean permissionToRecordAccepted = false;
@@ -105,7 +45,7 @@ public class MediaActivity extends AppCompatActivity {
 
     }
 
-    private void onRecord(boolean start) {
+    private static void onRecord(boolean start) {
         if (start) {
             startRecording();
         } else {
@@ -113,7 +53,7 @@ public class MediaActivity extends AppCompatActivity {
         }
     }
 
-    private void onPlay(boolean start) {
+    private static void onPlay(boolean start) {
         if (start) {
             startPlaying();
         } else {
@@ -121,7 +61,7 @@ public class MediaActivity extends AppCompatActivity {
         }
     }
 
-    private void startPlaying() {
+    private static void startPlaying() {
         player = new MediaPlayer();
         try {
             player.setDataSource(fileName);
@@ -132,12 +72,12 @@ public class MediaActivity extends AppCompatActivity {
         }
     }
 
-    private void stopPlaying() {
+    private static void stopPlaying() {
         player.release();
         player = null;
     }
 
-    private void startRecording() {
+    private static void startRecording() {
         recorder = new MediaRecorder();
         recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
@@ -153,13 +93,13 @@ public class MediaActivity extends AppCompatActivity {
         recorder.start();
     }
 
-    private void stopRecording() {
+    private static void stopRecording() {
         recorder.stop();
         recorder.release();
         recorder = null;
     }
 
-    class RecordButton extends androidx.appcompat.widget.AppCompatButton {
+    static class RecordButton extends androidx.appcompat.widget.AppCompatButton {
         boolean mStartRecording = true;
 
         OnClickListener clicker = new OnClickListener() {
@@ -181,7 +121,7 @@ public class MediaActivity extends AppCompatActivity {
         }
     }
 
-    class PlayButton extends androidx.appcompat.widget.AppCompatButton {
+    static class PlayButton extends androidx.appcompat.widget.AppCompatButton {
         boolean mStartPlaying = true;
 
         OnClickListener clicker = new OnClickListener() {
@@ -214,13 +154,13 @@ public class MediaActivity extends AppCompatActivity {
         ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);
 
         LinearLayout ll = new LinearLayout(this);
-        recordButton = new com.voicediary.AudioRecorder.RecordButton(this);
+        recordButton = new RecordButton(this);
         ll.addView(recordButton,
                 new LinearLayout.LayoutParams(
                         ViewGroup.LayoutParams.WRAP_CONTENT,
                         ViewGroup.LayoutParams.WRAP_CONTENT,
                         0));
-        playButton = new com.voicediary.AudioRecorder.PlayButton(this);
+        playButton = new PlayButton(this);
         ll.addView(playButton,
                 new LinearLayout.LayoutParams(
                         ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -242,6 +182,4 @@ public class MediaActivity extends AppCompatActivity {
             player = null;
         }
     }
->>>>>>> Authenticatio
 }
-

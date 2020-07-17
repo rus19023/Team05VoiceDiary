@@ -13,10 +13,29 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+<<<<<<< HEAD
+=======
+import android.widget.EditText;
+>>>>>>> Authenticatio
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+<<<<<<< HEAD
+=======
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static com.voicediary.R.id.fade;
+import static com.voicediary.R.id.nav_login;
+>>>>>>> Authenticatio
 import static com.voicediary.R.id.nav_view;
 
 public class MainActivity extends AppCompatActivity
@@ -25,6 +44,9 @@ public class MainActivity extends AppCompatActivity
   private static final String TAG = "MainActivity";
   String transcription;
   private DrawerLayout drawer;
+
+
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +69,16 @@ public class MainActivity extends AppCompatActivity
 
     // *** need to figure out user registered/logged in logic and implement here ***
     //  separate fragments for register and login
+
+
+
+
+
+
+
+
+
+
     if (savedInstanceState == null) {
       getSupportFragmentManager()
               .beginTransaction()
@@ -85,6 +117,14 @@ public class MainActivity extends AppCompatActivity
                   }
    */
 
+
+
+
+
+
+
+
+
   // show transcription received
   public String seeTranscription() {
     Toast.makeText(this, "working connection to seeTranscription ", Toast.LENGTH_SHORT).show();
@@ -121,11 +161,21 @@ public class MainActivity extends AppCompatActivity
         break;
       case R.id.nav_login:
         Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.main_view, new RegisterLoginFragment())
+
+                .commit();
+
         break;
       case R.id.nav_logout:
         Toast.makeText(this, "This menu item will connect to Logout", Toast.LENGTH_SHORT).show();
         break;
     }
+
+
+    Toast.makeText(this, "I am inmediatelly after item will connect to Login", Toast.LENGTH_SHORT).show();
+
     drawer.closeDrawer(GravityCompat.START);
     return true;
   }
@@ -141,6 +191,10 @@ public class MainActivity extends AppCompatActivity
 
   public void authenticateUser(View view) {
     Toast.makeText(this, "working connection to authenticateUser  ", Toast.LENGTH_SHORT).show();
+    UserAuthenticator newUser = new UserAuthenticator();
+    newUser.createUser(this);
+
+
     Log.d(TAG, "In authenticateUser");
   }
 
