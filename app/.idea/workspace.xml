@@ -63,7 +63,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_17_2_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_analytics_17_4_3_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_19_3_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_database_19_3_1_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_firebase_firebase_iid_20_0_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/google-services.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/voicediary/MainActivity.java" afterDir="false" />
@@ -128,6 +127,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -274,9 +274,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="322" y="88" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.720@0.0.1280.720" timestamp="1593439352977" />
-    <state x="242" y="0" key="CommitChangelistDialog2" timestamp="1593281255087">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1595003964534">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1280.690@0.0.1280.690" timestamp="1595003964534" />
     <state x="242" y="0" key="CommitChangelistDialog2/0.0.1280.720@0.0.1280.720" timestamp="1593281255087" />
     <state x="94" y="94" width="1092" height="532" key="DiffContextDialog" timestamp="1593281531168">
       <screen x="0" y="0" width="1280" height="720" />
@@ -342,10 +343,15 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="88" y="105" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1593458392094" />
-    <state x="432" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593460976518">
-      <screen x="0" y="0" width="1280" height="720" />
+    <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595003902287">
+      <screen x="0" y="0" width="1280" height="690" />
     </state>
+    <state x="432" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.690@0.0.1280.690" timestamp="1595003902287" />
     <state x="432" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1593460976518" />
+    <state x="427" y="136" key="git4idea.merge.GitMergeDialog" timestamp="1595003926951">
+      <screen x="0" y="0" width="1280" height="690" />
+    </state>
+    <state x="427" y="136" key="git4idea.merge.GitMergeDialog/0.0.1280.690@0.0.1280.690" timestamp="1595003926951" />
     <state x="344" y="151" key="git4idea.merge.GitPullDialog" timestamp="1593281424414">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
