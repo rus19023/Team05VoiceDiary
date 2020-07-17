@@ -12,6 +12,10 @@ import com.google.cloud.speech.v1.SpeechClient;
 import com.google.cloud.speech.v1.SpeechRecognitionAlternative;
 import com.google.cloud.speech.v1.SpeechRecognitionResult;
 import com.google.protobuf.ByteString;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -109,6 +113,7 @@ public class GetAsyncTranscript implements Runnable {
     public String receiveText() {
         Toast.makeText(context, "working connection to  receiveText", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In receiveText  ");
+        // TODO needs to display in fragment_recording, editTextTextMultiLine box
         return text;
     }
 
