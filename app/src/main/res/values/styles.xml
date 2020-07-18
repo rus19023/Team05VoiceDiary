@@ -2,15 +2,22 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:textColor">@color/colorAccent</item>
+        <item name="colorPrimary">@color/brand_yellow</item>
+        <item name="colorPrimaryDark">@color/brand_yellow_dark</item>
+        <item name="colorAccent">@color/brand_purple</item>
+        <item name="android:statusBarColor">@color/brand_purple</item>
+        <item name="android:textColor">@color/brand_yellow_dark</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
-    <item name="windowActionBar">false</item>
-    <item name="windowNoTitle">true</item>
-    <item name="android:statusBarColor">@android:color/transparent</item>
-</style>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColor">@color/brand_purple</item>
+    </style>
+
+    <style name="AppTheme.materialButtonOutlinedStyle">
+        <item name="android:background">@color/brand_purple</item>
+        <item name="android:textColor">@color/brand_yellow</item>
+    </style>
+
 </resources>

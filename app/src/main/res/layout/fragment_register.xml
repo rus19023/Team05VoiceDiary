@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/brand_yellow"
     android:onClick="resetPassword"
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin"
@@ -11,6 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/brand_yellow"
         android:orientation="vertical"
         android:padding="@dimen/activity_horizontal_margin"
         tools:context=".MainActivity">
@@ -36,7 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:hint="@string/name_hint" />
+            android:hint="@string/name_hint"
+            android:textColor="@color/brand_purple" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -52,7 +55,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:hint="@string/email_hint"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColor="@color/brand_purple" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,7 +72,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:hint="@string/password_hint"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="@color/brand_purple" />
 
 
         <LinearLayout
@@ -80,22 +85,28 @@
 
             <Button
                 android:id="@+id/registerUser"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/rounded_buttons"
                 android:onClick="authenticateUser"
+                android:padding="16dp"
                 android:text="@string/register_user"
+                android:textColor="@color/brand_yellow_dark"
                 android:textSize="@dimen/buttonTextSize" />
 
             <Button
                 android:id="@+id/revertButton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:background="@drawable/rounded_buttons"
                 android:onClick="loginCall"
+                android:padding="16dp"
                 android:text="@string/login"
+                android:textColor="@color/brand_yellow_dark"
                 android:textSize="@dimen/buttonTextSize" />
         </LinearLayout>
 
@@ -103,8 +114,12 @@
             android:id="@+id/resetPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_buttons"
             android:onClick="resetPassword"
+            android:padding="16dp"
+            android:shadowColor="@color/brand_yellow_dark"
             android:text="RESET PASSWORD"
+            android:textColor="@color/brand_yellow_dark"
             android:textSize="24sp" />
     </LinearLayout>
 </ScrollView>

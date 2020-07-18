@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_background">
+    android:background="@color/brand_yellow"
+    android:padding="16dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -12,10 +13,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
         android:text="@string/entry_management"
-        android:textSize="30sp"/>
+        android:textColor="@color/brand_purple"
+        android:textSize="36sp" />
 
-    <ImageButton
-        android:id="@+id/imageBtnCreateFolder"
+    <Button
+        android:id="@+id/BtnCreateFolder"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_alignParentTop="true"
@@ -24,7 +27,10 @@
         android:layout_marginEnd="79dp"
         android:contentDescription="@string/save_new_entry"
         android:onClick="saveNewEntry"
-        app:srcCompat="@drawable/ic_create_new_folder_lg" />
+        android:text="@string/create_folder"
+        android:textColor="@color/brand_purple"
+        android:textSize="20sp"
+        app:icon="@drawable/ic_baseline_create_new_folder_64" />
 
     <ImageButton
         android:id="@+id/imageBtnRetrieveEntry"
@@ -37,5 +43,36 @@
         android:contentDescription="@string/retrieve_entry"
         android:onClick="retrieveEntry"
         app:srcCompat="@drawable/retrieve" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="309dp"
+        android:height="50dp"
+        android:background="@drawable/rounded_buttons"
+        android:backgroundTint="@color/brand_purple"
+        android:elevation="4dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/create_folder"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/brand_yellow_dark"
+        android:textSize="30sp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:padding="16dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="277dp"
+        android:background="@drawable/rounded_buttons"
+        android:text="Retrieve Transcript"
+        android:textSize="30sp" />
 
 </RelativeLayout>

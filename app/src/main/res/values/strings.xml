@@ -61,5 +61,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="reset_password">RESET PASSWORD</string>
     <string name="reset_menu_item">Reset Password</string>
-    <string name="requesttranscription">RequestTranscription</string>
+    <string name="request_transcription">RequestTranscription</string>
+    <string name="create_folder">Create Folder</string>
 </resources>

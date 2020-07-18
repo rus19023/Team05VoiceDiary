@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFF38D</color>
-    <color name="colorPrimaryDark">#FFC107</color>
-    <color name="colorAccent">#9C27B0</color>
+    <color name="brand_yellow">#FFF38D</color>
+    <color name="brand_yellow_dark">#F6DC00</color>
+    <color name="brand_purple">#9C27B0</color>
     <color name="black_overlay">#66000000</color>
 </resources>

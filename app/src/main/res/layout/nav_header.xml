@@ -6,25 +6,14 @@
     android:background="@drawable/nav_header_background"
     android:gravity="bottom"
     android:orientation="vertical"
-    android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/header_img_desc"
-        android:src="@mipmap/ic_launcher_round" />
-
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
-        android:text="@string/app_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        tools:text="@string/nav_header_line_two"/>
+        android:padding="4dp"
+        android:textColor="@color/brand_purple"
+        android:fontFamily="sans-serif-condensed"
+        tools:text="@string/nav_header_line_two" />
 </LinearLayout>

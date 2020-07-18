@@ -16,170 +16,24 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            android:background="@color/brand_yellow"
+            android:elevation="4dp" />
+
         <FrameLayout
             android:id="@+id/main_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/fragment_recording"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingTop="@dimen/activity_vertical_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:paddingBottom="@dimen/activity_vertical_margin"
-                    android:background="@color/colorPrimary"
-                    tools:context=".AudioActivity">
-
-                    <TextureView
-                        android:id="@+id/surface_view"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="startToRecord" />
-
-                    <Button
-                        android:id="@+id/button_capture"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:onClick="onCaptureClick"
-                        android:text="@string/btnCapture" />
-                </FrameLayout>
-
-                <TextView
-                    android:id="@+id/tvRecording"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="64dp"
-                    android:layout_marginEnd="24dp"
-                    android:text="@string/create_new_entry"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageButton
-                    android:id="@+id/imageBtnRequest"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:background="@color/colorPrimary"
-                    android:elevation="6dp"
-                    android:onClick="requestTranscription"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/imageBtnSave"
-                    app:layout_constraintTop_toBottomOf="@+id/imageBtnRecordStop"
-                    app:srcCompat="@drawable/ic_request_lg"
-                    android:contentDescription="@string/requesttranscription" />
-
-                <ImageButton
-                    android:id="@+id/imageBtnPause"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="32dp"
-                    android:background="@color/colorPrimary"
-                    android:elevation="6dp"
-                    android:onClick="pauseRecording"
-                    app:layout_constraintEnd_toStartOf="@+id/imageBtnRecordStop"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/imageBtnRecord"
-                    app:layout_constraintTop_toBottomOf="@+id/tvRecording"
-                    app:srcCompat="@drawable/ic_pause_lg" />
-
-                <ImageButton
-                    android:id="@+id/imageBtnRecordStop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="32dp"
-                    android:background="@color/design_default_color_background"
-                    android:elevation="6dp"
-                    android:onClick="stopRecording"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/imageBtnPause"
-                    app:layout_constraintTop_toBottomOf="@+id/tvRecording"
-                    app:srcCompat="@drawable/ic_mic_off_lg" />
-
-                <ImageButton
-                    android:id="@+id/imageBtnRecord"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="32dp"
-                    android:background="@color/design_default_color_background"
-                    android:elevation="6dp"
-                    android:onClick="startRecording"
-                    android:textAlignment="center"
-                    app:layout_constraintEnd_toStartOf="@+id/imageBtnPause"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvRecording"
-                    app:srcCompat="@drawable/ic_mic_lg" />
-
-                <ImageButton
-                    android:id="@+id/imageBtnSave"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:background="@color/design_default_color_background"
-                    android:elevation="6dp"
-                    android:onClick="saveNewEntry"
-                    app:layout_constraintEnd_toStartOf="@+id/imageBtnRequest"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageBtnRecord"
-                    app:srcCompat="@drawable/ic_save_lg" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/save_recording"
-                    app:layout_constraintEnd_toStartOf="@+id/tvRequest"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageBtnSave" />
-
-                <TextView
-                    android:id="@+id/tvRequest"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/request_transcript"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textView"
-                    app:layout_constraintTop_toBottomOf="@+id/imageBtnRequest" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="match_parent"
+            android:background="@color/brand_yellow">
         </FrameLayout>
     </LinearLayout>
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@color/brand_yellow"
         app:headerLayout="@layout/nav_header"
+        app:itemTextColor="@color/brand_purple"
         app:menu="@menu/drawer_menu" />
 </androidx.drawerlayout.widget.DrawerLayout>

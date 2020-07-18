@@ -13,14 +13,7 @@
             android:id="@+id/nav_print_menu"
             android:icon="@drawable/ic_print"
             android:title="@string/print_menu" />
-        <item
-            android:id="@+id/nav_view_transcription"
-            android:icon="@drawable/ic_view_transcription"
-            android:title="" />
-        <item
-            android:id="@+id/nav_save_new_entry"
-            android:icon="@drawable/ic_save_entry"
-            android:title="" />
+
     </group>
 
             <item

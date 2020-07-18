@@ -21,13 +21,10 @@
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true"/>
         <activity
-            android:name=".AudioActivity"
+            android:name=".MediaActivity"
             android:label="@string/title_activity_audio"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme" />
+
         <activity android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
