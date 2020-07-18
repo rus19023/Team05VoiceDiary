@@ -23,7 +23,7 @@
         android:layout_marginTop="161dp"
         android:layout_marginEnd="79dp"
         android:contentDescription="@string/save_new_entry"
-        android:onClick="saveNewEntry"
+        android:onClick="StorageSave"
         app:srcCompat="@drawable/ic_create_new_folder_lg" />
 
     <ImageView
@@ -35,7 +35,7 @@
         android:layout_marginStart="73dp"
         android:layout_marginTop="159dp"
         android:contentDescription="@string/retrieve_entry"
-        android:onClick="retrieveEntry"
+        android:onClick="StorageGet"
         app:srcCompat="@drawable/retrieve" />
 
 </RelativeLayout>

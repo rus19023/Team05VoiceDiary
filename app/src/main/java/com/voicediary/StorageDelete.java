@@ -64,8 +64,8 @@ public class StorageDelete implements Runnable {
                 // Uh-oh, an error occurred!
             }
         });
-        Toast.makeText(context, "working conection to deleteSavedEntry", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "In  saveNewEntry ");
+        Toast.makeText(context, "working connection to StorageDelete", Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "In  saveNewEntry");
         return true;
     }
 }

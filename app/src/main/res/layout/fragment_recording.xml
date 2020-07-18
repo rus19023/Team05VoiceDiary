@@ -98,7 +98,7 @@
             android:layout_marginTop="32dp"
             android:background="@color/design_default_color_background"
             android:elevation="6dp"
-            android:onClick="saveNewEntry"
+            android:onClick="StorageSave"
             app:layout_constraintEnd_toStartOf="@+id/imageBtnRequest"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"

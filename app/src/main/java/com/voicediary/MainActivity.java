@@ -177,19 +177,19 @@ public class MainActivity extends AppCompatActivity
     Log.d(TAG, "In  viewTranscription");
   }
 
-  public void saveNewEntry(View view) {
-    Toast.makeText(this, "working connection to  saveNewEntry", Toast.LENGTH_SHORT).show();
-    Log.d(TAG, "In saveNewEntry");
+  public void StorageSave(View view) {
+    Toast.makeText(this, "working connection to  StorageSave", Toast.LENGTH_SHORT).show();
+    Log.d(TAG, "In StorageSave");
   }
 
-  public void deleteSavedEntry(View view) {
-    Toast.makeText(this, "working connection to deleteSavedEntry", Toast.LENGTH_SHORT).show();
-    Log.d(TAG, "In  saveNewEntry");
+  public void StorageDelete(View view) {
+    Toast.makeText(this, "working connection to StorageDelete", Toast.LENGTH_SHORT).show();
+    Log.d(TAG, "In  StorageDelete");
   }
 
-  public void retrieveEntry(View view) {
-    Toast.makeText(this, "working connection to retrieveEntry ", Toast.LENGTH_SHORT).show();
-    Log.d(TAG, "In  retrieveEntry");
+  public void StorageGet(View view) {
+    Toast.makeText(this, "working connection to StorageGet ", Toast.LENGTH_SHORT).show();
+    Log.d(TAG, "In  StorageGet");
   }
 
   public void receiveText(View view) {

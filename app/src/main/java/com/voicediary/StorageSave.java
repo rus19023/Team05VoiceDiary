@@ -50,6 +50,7 @@ public class StorageSave implements Runnable {
         this.uid = uid;
     }
 
+
     @Override
     public void run() {
         storageReference = FirebaseStorage.getInstance().getReference();
@@ -120,7 +121,7 @@ public class StorageSave implements Runnable {
                     }
                 });
 
-        Toast.makeText(context, "working connection to saveNewEntry", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "working connection to StorageSave", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In   ");
         return true;
     }

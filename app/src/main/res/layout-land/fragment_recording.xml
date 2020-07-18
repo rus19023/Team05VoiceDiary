@@ -86,7 +86,7 @@
             android:layout_marginEnd="63dp"
             android:background="@color/design_default_color_background"
             android:elevation="6dp"
-            android:onClick="saveNewEntry"
+            android:onClick="StorageSave"
             app:layout_constraintBottom_toBottomOf="@+id/imageBtnRequest"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageBtnRequest"

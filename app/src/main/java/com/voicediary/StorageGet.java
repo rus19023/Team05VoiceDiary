@@ -74,7 +74,7 @@ public class StorageGet implements Runnable {
             }
         });
 
-        Toast.makeText(context, "working connection to saveNewEntry", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "working connection to StorageGet", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In   ");
         return true;
     }
