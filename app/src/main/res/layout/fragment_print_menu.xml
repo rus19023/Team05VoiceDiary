@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@drawable/rounded_buttons"
+        android:padding="16dp"
         android:text="@string/print_menu"
         android:textSize="30sp" />
 </RelativeLayout>

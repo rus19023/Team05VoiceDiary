@@ -61,7 +61,7 @@ public class UserAuthenticator {
 
         /*need it variables to work with firebase*/
         userFirebase = FirebaseAuth.getInstance();
-        Toast.makeText(context, "working connection to createe User inside the class  ", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "working connection to create User inside the class  ", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "In createUser  ");
         /*reference to the base node of firebase database*/
         usDatabase = FirebaseDatabase.getInstance().getReference();
@@ -92,7 +92,7 @@ public class UserAuthenticator {
             }
 
         } else {
-            Toast.makeText(context, "Must complette all fields", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Please complete all fields", Toast.LENGTH_SHORT).show();
         }
 
 
@@ -133,7 +133,7 @@ public class UserAuthenticator {
                         public void onComplete(@NonNull Task<Void> task2) {
                             if (task2.isSuccessful()) {
                                 /*here we send the user to the activity or fragment to initiate the app and put finish to don't return here*/
-                                Toast.makeText(context, "succsesful login", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, "successful login", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(context, MainActivity.class);
                                 startActivity(context, intent, null);
                                 context.finish();
@@ -143,7 +143,7 @@ public class UserAuthenticator {
 
 
                 } else {
-                    Toast.makeText(context, "User couldn't be register", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "User couldn't be registered", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -162,7 +162,7 @@ public class UserAuthenticator {
         if (!eMail.isEmpty() && (!password.isEmpty())) {
             login(eMail, password, context);
         } else {
-            Toast.makeText(context, "Must complete all fields.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Please complete all fields.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -176,10 +176,10 @@ public class UserAuthenticator {
                          if (task.isSuccessful()) {
                              Intent intent = new Intent(context, MainActivity.class);
                              startActivity(context, intent, null);
-                             Toast.makeText(context, "SUCCSESS LOGIN", Toast.LENGTH_SHORT).show();
+                             Toast.makeText(context, "SUCCESS LOGIN", Toast.LENGTH_SHORT).show();
                              context.finish();
                          } else {
-                             Toast.makeText(context, "Couldn't start session, must review your input.", Toast.LENGTH_SHORT).show();
+                             Toast.makeText(context, "Couldn't start session, please review your input.", Toast.LENGTH_SHORT).show();
                          }
                      }
 
@@ -200,7 +200,7 @@ public class UserAuthenticator {
 
         /*apply the method signout from the FirebaseAuth class to my object*/
         userFirebase.signOut();
-        Toast.makeText(context, "SUCCESS LOGOUT", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "SUCCESSFUL LOGOUT", Toast.LENGTH_SHORT).show();
         /*back to Main Activity*/
         Intent intent = new Intent(context, MainActivity.class);
         startActivity(context, intent, null);
@@ -219,18 +219,18 @@ public class UserAuthenticator {
 
                                                                                  @Override
                                                                                  public void onComplete(@NonNull Task<Void> task) {
-                                                                                     if (task.isSuccessful()){
-                                                                                         Toast.makeText(context, "We send you an email to reestablish your password", Toast.LENGTH_SHORT).show();
-                                                                                     }
-                                                                                     else{
-                                                                                         Toast.makeText(context, "We couldn't reestablish with this email.", Toast.LENGTH_SHORT).show();
-                                                                                     }
-                                                                                 }
-                                                                             }
+             if (task.isSuccessful()){
+                 Toast.makeText(context, "We send you an email to reestablish your password", Toast.LENGTH_SHORT).show();
+             }
+             else{
+                 Toast.makeText(context, "We couldn't reestablish with this email.", Toast.LENGTH_SHORT).show();
+             }
+         }
+     }
 
             );
         } else {
-            Toast.makeText(context, "Must enter an email", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Please enter an email", Toast.LENGTH_SHORT).show();
         }
 
     }

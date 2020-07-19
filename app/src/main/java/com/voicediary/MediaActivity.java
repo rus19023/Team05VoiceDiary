@@ -1,28 +1,32 @@
 package com.voicediary;
 
-
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Objects;
 
 public class MediaActivity extends AppCompatActivity {
     private static final String LOG_TAG = "AudioRecordTest";
     private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
-    private static String fileName = null;
+    // TODO - fix filename to date/time?
+    private static String fileName = "";
 
     private AudioRecorder.RecordButton recordButton = null;
     private static MediaRecorder recorder = null;
@@ -42,8 +46,7 @@ public class MediaActivity extends AppCompatActivity {
                 permissionToRecordAccepted  = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                 break;
         }
-        if (!permissionToRecordAccepted ) finish();
-
+        if (!permissionToRecordAccepted) finish();
     }
 
     private static void onRecord(boolean start) {
@@ -78,20 +81,21 @@ public class MediaActivity extends AppCompatActivity {
         player = null;
     }
 
-    private static void startRecording() {
+    static void startRecording() {
         recorder = new MediaRecorder();
         recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         recorder.setOutputFile(fileName);
         recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
 
-        try {
+       try {
             recorder.prepare();
+           Log.e(LOG_TAG, "prepare() did NOT fail");
         } catch (IOException e) {
             Log.e(LOG_TAG, "prepare() failed");
         }
-
         recorder.start();
+        Log.e(LOG_TAG, "start() did NOT fail");
     }
 
     private static void stopRecording() {
@@ -147,9 +151,12 @@ public class MediaActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+        setContentView(R.layout.fragment_recording);
 
         // Record to the external cache directory for visibility
-        fileName = getExternalCacheDir().getAbsolutePath();
+
+        //Environment.getExternalStorageDirectory().getPath()+"/audiofile.3gp";
+        fileName = Objects.requireNonNull(getExternalCacheDir()).getAbsolutePath();
         fileName += "/audiorecordtest.3gp";
 
         ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);

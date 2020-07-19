@@ -1,6 +1,8 @@
 package com.voicediary;
 
+import android.Manifest;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -12,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
@@ -62,19 +65,20 @@ public class MainActivity extends AppCompatActivity
   @Override
   public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-    // *** need to figure out user registered/logged in logic and implement here ***
+
     //  separate fragments for register and login
     // we check here that the user is logged in , if not we run register
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    if (user != null){
+    if (user != null) {
       /*user is signed in*/
       switch (item.getItemId()) {
 
         case R.id.nav_record:
           getSupportFragmentManager()
-              .beginTransaction()
-               .replace(R.id.main_view, new RecordingFragment())
-              .commit();
+                  .beginTransaction()
+                  .replace(R.id.main_view, new RecordingsFragment())
+                  .commit();
+          break;
         case R.id.nav_print_menu:
           getSupportFragmentManager()
               .beginTransaction()
@@ -86,7 +90,7 @@ public class MainActivity extends AppCompatActivity
                   .beginTransaction()
                   .replace(R.id.main_view, new EntriesFragment())
                   .commit();
-              break;
+            break;
         case R.id.nav_login:
           Toast.makeText(this, "This menu item will connect to Login", Toast.LENGTH_SHORT).show();
           getSupportFragmentManager()
@@ -106,7 +110,7 @@ public class MainActivity extends AppCompatActivity
                   .commit();
       }
     }
-    else{
+    else {
       Toast.makeText(this, "You must sign in to use the app, please sign in.", Toast.LENGTH_SHORT).show();
 
       // No user is signed in
@@ -141,6 +145,20 @@ public class MainActivity extends AppCompatActivity
     newUser.createUser(this);
 
     Log.d(TAG, "In authenticateUser");
+  }
+
+  public void record(View view) {
+    MediaActivity mRecorder = new MediaActivity();
+    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)
+            != PackageManager.PERMISSION_GRANTED) {
+      ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.RECORD_AUDIO },
+              10);
+    } else {
+        mRecorder.startRecording();
+    }
+
+    Toast.makeText(this, "working connection to startRecording  ", Toast.LENGTH_SHORT).show();
+    Log.d(TAG, "In startRecording");
   }
 
   public void pauseRecording(View view) {
